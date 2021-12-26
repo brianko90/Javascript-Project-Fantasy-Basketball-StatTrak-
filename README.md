@@ -18,7 +18,14 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 
 ## WireFrames
 
+![Wireframe1](/images/wireframe1.png)
 
+- This will be the most important part since it displays the most information and data.
+- The nav links will let users access my information.
+- On the right side, there is a mock team creator, where you can add players from the main search area by pressing the (+) next to player. 
+- Each of the statistical categories will be displayed above the player slots. 
+- When you click on each player, there will be a popup window that will display the past years statistics of the player and a graph showing their average stats relative to the league/position average.
+![Wireframe2](/images/wireframe2.png)
 
 ## Technologies, Libraries, APIs
 
