@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", e => {
   let fetchUtil = new Fetch();
   let util = new Util();
   let player;
-  fetchUtil.fetchTeam()
+  fetchUtil.fetchPlayer();
   
   // console.log(player)
 })

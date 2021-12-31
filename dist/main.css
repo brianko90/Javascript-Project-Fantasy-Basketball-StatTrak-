@@ -24,9 +24,19 @@
 }
 
 #player-view {
-  border: 2px solid black;
   display: flex;
   justify-content: center;
-  width: 50%;
-  justify-content: center;
+  width: 80%;
+}
+
+.playerDiv {
+  border: 2px solid black;
+  width: 70%;
+  height: 100px;
+  display: flex;
+}
+
+.headshot {
+  width: 20%;
+  height: 80%;
 }
