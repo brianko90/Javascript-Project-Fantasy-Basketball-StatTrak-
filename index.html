@@ -5,15 +5,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./dist/main.css" />
-    <script src="./dist/main.js"></script>
+    <script src="./dist/main.js" type="module"></script>
     <title>Fantasy Basketball StatTrak</title>
   </head>
 
   <body>
-    <!-- <header>
-      <img src="/images/banner.png"> Issue with image taking whole dom
-    </header> -->
+    <header>
+      <img src="/images/mainBanner2.png" id="banner">
+      <nav class="my-info-nav">
+        <ul class="contact-info">
+          <!-- Change these into <a> tags later -->
+          <li class="contact">GitHub</li> 
+          <li class="contact">LinkedIn</li>
+          <li class="contact">Email Address</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section> 
+      <ul class="category-bar">Stats
+        <li>Pts</li>
+        <li>Ast</li>
+        <li>Reb</li>
+        <li>OReb</li>
+        <li>DReb</li>
+        <li>fg3</li>
+        <li>Stl</li>
+        <li>Blk</li>
+        <li>TO</li>
+        <li>FG%</li>
+        <li>FT%</li>
+      </ul>
+    </section>
+    <!-- <section id="main-search">
+      <label>Search for Player:
+        <input type="text" name="player[name]" value="">
+      </label>
+      <label>
+        <button>Search</button>
+      </label>
+    </section> -->
+    <section id="player-view">
+      <div id="player2-container">
+        <ul id="player-list">
+
+        </ul>
+      </div>
+    </section>
   </body>
 
 </html>

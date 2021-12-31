@@ -1,0 +1,30 @@
+#banner {
+  width: 100%;
+  height: 200px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+}
+
+.category-bar {
+  display: none;
+  list-style-type: none;
+  justify-content:space-evenly;
+}
+
+#main-search {
+  display: flex;
+  justify-content: center;
+}
+
+#player-view {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  justify-content: center;
+
+}

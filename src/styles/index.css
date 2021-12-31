@@ -1,0 +1,16 @@
+#banner {
+  width: 100%;
+  height: 200px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+}
+
+.category-bar {
+  display: flex;
+  list-style-type: none;
+  justify-content:space-evenly;
+}
