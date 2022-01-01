@@ -1,16 +1,18 @@
+import { Fetch } from './fetch.js';
 export class Util {
+  
   listPlayer(player) {
     let playerView = document.querySelector('#player-view');
     let div = this.formatPlayerForList(player);
     playerView.appendChild(div);
     this.addPlayerInfo(player);
   }
-
+  
+  //Adding 
   addSeasons(data) {
-    console.log(data)
     this.addTableToPlayer(data);
   }
-
+  
   //Creating Player h3 element
   formatPlayerForList(player) {
     let h2 = document.createElement('h2');
@@ -18,7 +20,6 @@ export class Util {
     let div = document.createElement('div');
     div.classList.add('playerDiv')
     let img = this.addImageToPlayer(player);
-    // div.setAttribute("id", `${player.id}`)
     div.appendChild(img);
     return div;
   }
@@ -53,12 +54,22 @@ export class Util {
 
   addTableToPlayer(seasons) {
     let div = Array.from(document.getElementsByClassName("playerDiv")).pop();
-    const categories = ["Team", "GP", "GS", "MPG", "PPG", "RPG", "APG", 
-                        "BPG", "FG%", "FT%", "3P%", "TO"]
+    const categories = ["Season", "Team", "GP", "GS", "MPG", "PPG", "RPG",   "APG", "BPG", "FG%", "FT%", "3P%", "TO"]
     const table = document.createElement('table');
     table.classList.add('table');
-    for(let i=0; i<4; i++) {
-      const stats = [`${seasons[i].team}`,
+    const row = document.createElement('tr');
+    categories.forEach((cat) => {
+      row.classList.add('categoryLabel')
+      const label = document.createElement('th')
+      label.classList.add('cat')
+      label.textContent = cat;
+      row.append(label);
+    })
+    table.append(row)
+  
+    for(let i=seasons.length - 1; i>seasons.length-4; i--) {
+      const stats = [`${seasons[i].season}`,
+                      `${seasons[i].team}`,
                       `${seasons[i].gamesPlayed}`,
                       `${seasons[i].gamesStarted}`,
                       `${seasons[i].minsPerGame}`,
@@ -71,25 +82,54 @@ export class Util {
                       `${seasons[i].percentageThree}`,
                       `${seasons[i].turnoversPerGame}`]
       const row = document.createElement('tr');
-      if(i === 0) {
-        categories.forEach((cat) => {
-          row.classList.add('categoryLabel')
-          const label = document.createElement('th')
-          label.textContent = cat;
-          row.append(label);
-        })
-        table.append(row)
-      } else {
-        row.classList.add('seasonStats');
-        stats.forEach((stat) => {
-          row.classList.add('categoryValue')
-          const value = document.createElement('td');
-          value.textContent = stat;
-          row.append(value);
-        })
-        table.append(row);
-      }
+      
+      row.classList.add('seasonStats');
+      stats.forEach((stat) => {
+        row.classList.add('categoryValue');
+        const value = document.createElement('td');
+        value.classList.add('stat');
+        value.textContent = stat;
+        row.append(value);
+      })
+      table.append(row);
+      
     }
     div.appendChild(table);
+  }
+
+  makeGraph() {
+    
+    const ctx = document.getElementById("myChart").getContext("2d");
+
+    const labels = ["MPG", "PPG", "RPG", "APG", "BPG", "FG%", "FT%", "3P%", "TO"];
+
+    const data = {
+      labels: labels,
+      datasets: [{
+        data: [20, 30, 40, 40, 13, 15, 15 ,44, 13],
+        label: "Player Averages"
+      },
+      {
+        data: [10, 50, 20, 50, 3, 15, 15, 64, 3],
+        label: "Player Averages"
+      }]
+    }
+
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {
+        responsive: true,
+      }
+    }
+
+    const myChart = new Chart(ctx, config);
+  }
+
+  dataForGraph() {
+    
+    let seasons = Fetch.fetchSeasons(playerId)
+    // let lastSeason = seasons.pop();
+    console.log(seasons)
   }
 }

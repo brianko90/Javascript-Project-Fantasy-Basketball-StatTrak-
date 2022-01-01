@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Fantasy Basketball StatTrak</title>
   </head>
 
@@ -23,27 +24,17 @@
         </ul>
       </nav>
     </header>
-    <!-- <section> 
-      <ul class="category-bar">Stats
-        <li>Pts</li>
-        <li>Ast</li>
-        <li>Reb</li>
-        <li>OReb</li>
-        <li>DReb</li>
-        <li>fg3</li>
-        <li>Stl</li>
-        <li>Blk</li>
-        <li>TO</li>
-        <li>FG%</li>
-        <li>FT%</li>
-      </ul>
-    </section> -->
     <form id="main-search">
       <label>Search for Player:
         <input type="text" name="player[name]" id="player-name">
         <button class="button">Search</button>
       </label>
     </form>
+    <!-- **********Chart Here -->
+    <div class="chart">
+      <canvas id="myChart"></canvas>
+    </div>
+    <!-- **********Chart Here -->
     <!-- ********* Where I'm Adding Players-->
     <section id="player-view">
 

@@ -15,10 +15,7 @@ export class Fetch {
         return res.json();
       })
       .then(data => {
-        console.log(data)
-        util.listPlayer(data);
-        this.fetchSeasons(data.id);
-        
+        return data;
       })
 
   }
@@ -35,7 +32,6 @@ export class Fetch {
         return res.json();
       })
       .then(data => {
-        return util.addSeasons(data);
         return data;
       })
   }

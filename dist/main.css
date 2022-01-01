@@ -26,12 +26,13 @@
 #player-view {
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .playerDiv {
   border: 2px solid black;
-  width: 70%;
+  width: 100%;
   height: 100px;
   display: flex;
 }
@@ -39,4 +40,18 @@
 .headshot {
   width: 20%;
   height: 80%;
+}
+
+.categoryLabel {
+  background-color: grey;
+  justify-content: space-evenly;
+}
+
+.cat, .stat {
+  border: 1px solid black;
+}
+
+.chart {
+  position: relative;
+  width: 80vw;
 }
