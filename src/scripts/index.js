@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", e => {
   
   let searchForm = document.querySelector('#main-search');
   let player = [];
+  const chart = util.makeGraph();
   searchForm.addEventListener("submit", async e => {
     e.preventDefault();
     const nameInput = document.querySelector('#player-name');
@@ -15,12 +16,13 @@ document.addEventListener("DOMContentLoaded", e => {
     nameInput.value = '';
     let player = await fetchUtil.fetchPlayer(playerName);
     let seasons = await fetchUtil.fetchSeasons(player.id);
+    let articles = await fetchUtil.fetchArticle(player);
     util.listPlayer(player);
     util.addSeasons(seasons);
+    util.addRemoveButton(player, chart);
+    util.addDataToGraph(chart, player, seasons);
+    util.addArticle(player, articles);
   })
-  util.makeGraph();
+  
 })
 
-
-// ****** FIND OUT HOW TO GET GRAPH TO DISPLAY ONLY ONCE AND THEN 
-//        ADD PLAYER DATA TO IT ******f

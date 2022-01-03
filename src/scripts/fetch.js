@@ -17,6 +17,9 @@ export class Fetch {
       .then(data => {
         return data;
       })
+      .catch(err => {
+        console.error(err);
+      });
 
   }
 
@@ -34,6 +37,30 @@ export class Fetch {
       .then(data => {
         return data;
       })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
+  fetchArticle(player){
+    let playerName = `${player.firstName}-${player.lastName}`.toLowerCase();
+    return fetch(`https://nba-latest-news.p.rapidapi.com/news/player/${playerName}`, {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "nba-latest-news.p.rapidapi.com",
+        "x-rapidapi-key": "3810760e2cmsh322f7f5a3bf874ap1be58fjsn2ee382b1e5c1"
+      }
+    })
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data)
+        return data;
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
 }

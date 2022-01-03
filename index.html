@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <title>Fantasy Basketball StatTrak</title>
   </head>
 
@@ -18,18 +21,24 @@
       <nav class="my-info-nav">
         <ul class="contact-info">
           <!-- Change these into <a> tags later -->
-          <li class="contact">GitHub</li> 
-          <li class="contact">LinkedIn</li>
-          <li class="contact">Email Address</li>
+          <li class="contact"><a href="">GitHub</a></li> 
+          <li class="contact"><a href="">LinkedIn</a></li>
+          <li class="contact"><a href="">bako2466@gmail.com</a></li>
         </ul>
       </nav>
     </header>
-    <form id="main-search">
+    <div id="search">
+      <form class="search-box" id="main-search"> 
+        <button class="button btn-search"><i class="fas fa-search"></i></button>
+        <input type="text" id="player-name" class="input-search" placeholder="">
+      </form>
+    </div>
+    <!-- <form id="main-search">
       <label>Search for Player:
         <input type="text" name="player[name]" id="player-name">
         <button class="button">Search</button>
       </label>
-    </form>
+    </form> -->
     <!-- **********Chart Here -->
     <div class="chart">
       <canvas id="myChart"></canvas>
