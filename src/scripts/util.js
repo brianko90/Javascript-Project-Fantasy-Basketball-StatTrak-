@@ -32,8 +32,45 @@ const teamColor = {
   'UTAH': 'rgba(0, 43, 92)',
   'WSH': 'rgba(227,24,55)rgba'};
 
+const teamUrl = [
+  'https://www.espn.com/nba/team/roster/_/name/lal/los-angeles-lakers',
+  'https://www.espn.com/nba/team/roster/_/name/wsh/washington-wizards',
+  'https://www.espn.com/nba/team/roster/_/name/orl/orlando-magic',
+  'https://www.espn.com/nba/team/roster/_/name/atl/atlanta-hawks',
+  'https://www.espn.com/nba/team/roster/_/name/sa/san-antonio-spurs',
+  'https://www.espn.com/nba/team/roster/_/name/sac/sacramento-kings',
+  'https://www.espn.com/nba/team/roster/_/name/mia/miami-heat',
+  'https://www.espn.com/nba/team/roster/_/name/phi/philadelphia-76ers',
+  'https://www.espn.com/nba/team/roster/_/name/gs/golden-state-warriors',
+  'HOU',
+  'IND',
+  'LAC',
+  'LAL',
+  'MEM',
+  'MIA',
+  'MIL',
+  'MIN',
+  'NO',
+  'NY',
+  'BKN',
+  'OKC',
+  'ORL',
+  'PHI',
+  'PHX',
+  'POR',
+  'SAC',
+  'SA',
+  'TOR',
+  'UTAH',
+  'WSH'
+]
+  
 export class Util {
   
+  // constructor() {
+  //   let fetch = new Fetch();
+  // }
+
   listPlayer(player) {
     let playerView = document.querySelector('#player-view');
     let div = this.formatPlayerForList(player);
@@ -79,7 +116,6 @@ export class Util {
   removePlayerBox(player) {
     let playerDiv = Array.from(document.getElementsByClassName(`${player.firstName}${player.lastName}`));
     playerDiv[0].remove();
-    
   }
 
 
@@ -268,8 +304,6 @@ export class Util {
   }
 
   addArticle(player, articles){
-    console.log(articles)
-
     let div = Array.from(document.getElementsByClassName("playerDiv")).pop();
     let articleContainer = document.createElement('div');
     articleContainer.classList.add('articleContainer')
@@ -280,23 +314,31 @@ export class Util {
     
     if (articles.length > 0) {
       article.href = articles[0].url;
-    //   for(let i=0; i<3; i++) {
-    //     let articleA = document.createElement('a');
-    //     articleA.innerText = article.title;
-    //     articleA.href = article.url;
-    //     articleContainer.appendChild(articleA);
-    //   }
-    // } else {
-    //   articles.forEach((article, i) => {
-    //     let articleA = document.createElement('a');
-    //     articleA.innerText = `Story ${i + 1}`
-    //     articleA.href = article.url;
-    //     articleContainer.appendChild(articleA);
-    //   })
     } else {
       article.href = '#';
     }
     articleContainer.appendChild(article);
     div.append(articleContainer);
+  }
+
+  addTeamsToDropdown(teams) {
+    
+    let teamDropdown = Array.from(document.getElementsByClassName('dropContent'))[0];
+    
+    teams.forEach((team) => {
+      let teamDiv = document.createElement('div');
+      let teamA = document.createElement('a');
+      let teamImg = document.createElement('img');
+      teamImg.src = team.teamLogoUrl;
+      teamImg.classList.add('teamLogo');
+      teamDiv.appendChild(teamImg);
+      teamA.innerText = team.name;
+      teamDiv.appendChild(teamA);
+      console.log(teamA)
+      // teamA.href = 1
+      // teamA.innerHTML = 
+      teamDropdown.append(teamDiv)
+    })
+    // teamDropdown.append(teamA)
   }
 }

@@ -1,13 +1,13 @@
 import {Fetch} from './fetch.js';
 import {Util} from './util.js';
-import {Button} from './buttonUtil.js';
-import { SearchUtil } from './searchUtil.js';
-document.addEventListener("DOMContentLoaded", e => {
-  // let sidebar = document.
+import {SearchUtil} from './searchUtil.js';
+
+document.addEventListener("DOMContentLoaded", async e => {
   let search = new SearchUtil();
   let fetch = new Fetch();
   let util = new Util();
-  
+  let teams = await fetch.fetchTeams()
+  util.addTeamsToDropdown(teams)
   let searchForm = document.querySelector('#main-search');
   const chart = util.makeGraph(); 
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", e => {
       util.addDataToGraph(chart, player, seasons);
     } else {
       search.toggleError();
-      setTimeout(search.toggleError, 3000);
+      setTimeout(search.toggleError, 2000);
     }
     search.toggleSearch();
     search.toggleSpinner();

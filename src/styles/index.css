@@ -18,23 +18,35 @@ body {
 #logo {
   position: relative;
   top: -30px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   
 }
 
-header {
+.header-container {
   display: flex;
   height: 80px;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  /* margin: auto; */
   /* background-color: teal;
   border-bottom: 1px solid gray; */
+}
+
+.header-center {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.page-container {
+  padding-top: 50px;
 }
 
 .icon-container {
   width:5%;
   margin: 10px;
 }
+
 
 .header-right {
   justify-content: right;
@@ -47,6 +59,12 @@ header {
 #main-search {
   display: block;
   justify-content: center;
+}
+
+.header-center {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 #player-view {
