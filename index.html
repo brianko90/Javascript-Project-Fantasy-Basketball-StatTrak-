@@ -16,8 +16,17 @@
 
   <body>
     <header>
-      <img src="/images/logo3.png" id="logo">
-      <div>Fantasy Basketball StatTrak</div>
+      <div class="header-left">
+        <div class="dropdown">
+          <button class="dropButton"><i class="fas fa-bars fa-2x"></i></button>
+          <div class="dropContent">
+
+          </div>
+        </div>
+      </div>
+      <div class="header-center">
+        <img src="/images/logo3.png" id="logo">
+      </div>
       <div class="header-right">
         <div class="icon-container">
           <a href="https://github.com/brianko90/Javascript-Project-Fantasy-Basketball-StatTrak-" target="_blank">
@@ -42,7 +51,8 @@
             <input type="text" id="player-name" class="input-search" placeholder="">
           </form>
           <div class="spinner hidden"></div>
-        </div>    
+        </div>
+        <div class="error invisible">This Player does not exist</div>   
         <div class="chart">
           <canvas id="myChart"></canvas>
         </div>

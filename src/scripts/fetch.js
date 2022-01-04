@@ -12,6 +12,9 @@ export class Fetch {
       }
     })
       .then(res => {
+        if(!res.ok) {
+          throw new Error("This player does not exist");
+        }
         return res.json();
       })
       .then(data => {
@@ -32,7 +35,11 @@ export class Fetch {
       }
     })
       .then(res => {
-        return res.json();
+        if(!res) {
+          throw new Error("Player has not played yet");
+        } else {
+          return res.json();
+        }
       })
       .then(data => {
         return data;
@@ -52,7 +59,11 @@ export class Fetch {
       }
     })
       .then(res => {
-        return res.json();
+        if(!res.ok) {
+          throw new Error("There are no news articles")
+        } else {
+          return res.json();
+        }
       })
       .then(data => {
         console.log(data)

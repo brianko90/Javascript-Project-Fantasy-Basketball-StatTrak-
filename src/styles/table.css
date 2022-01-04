@@ -5,13 +5,26 @@ li.name {
 
 .team, .position,
 .dob, .height, .weight {
-  color: gray;
+  color: white;
   font-size: 12px;
 }
 
 .headshot {
   width: 15%;
   height: auto;
+  opacity: 100%;
+}
+
+.playerDiv {
+  border: 2px solid white;
+  width: 80%;
+  height: auto;
+  display: flex;
+  position: relative;
+  font-family: arial;
+  background-color:rgba(0, 0, 0, 0.447);
+  /* opacity: 100%; */
+  color: white;
 }
 
 .playerInfo {
@@ -34,16 +47,23 @@ li.name {
   /* justify-content:left; */
 }
 
-.article-container {
+.articleContainer {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
+
   width:100px;
+}
+
+a.news-link {
+  text-align: center;
+  color: white;
 }
 
 .cat, .stat {
   display:table-cell;
-  border: 1px solid black;
+  border: 1px solid white;
   text-align: center;
 }
 

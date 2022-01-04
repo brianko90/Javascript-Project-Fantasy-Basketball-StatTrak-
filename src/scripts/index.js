@@ -19,14 +19,18 @@ document.addEventListener("DOMContentLoaded", e => {
     const playerName = nameInput.value;
     nameInput.value = '';
     let player = await fetch.fetchPlayer(playerName);
-    let seasons = await fetch.fetchSeasons(player.id);
-    let articles = await fetch.fetchArticle(player);
-    // put code to make loading circle disappear and search bar appear
-    util.listPlayer(player);
-    util.addSeasons(seasons);
-    util.addArticle(player, articles);
-    util.addRemoveButton(player, chart);
-    util.addDataToGraph(chart, player, seasons);
+    if(player) {
+      let seasons = await fetch.fetchSeasons(player.id);
+      let articles = await fetch.fetchArticle(player);
+      util.listPlayer(player);
+      util.addSeasons(seasons);
+      util.addArticle(player, articles);
+      util.addRemoveButton(player, chart);
+      util.addDataToGraph(chart, player, seasons);
+    } else {
+      search.toggleError();
+      setTimeout(search.toggleError, 3000);
+    }
     search.toggleSearch();
     search.toggleSpinner();
   })

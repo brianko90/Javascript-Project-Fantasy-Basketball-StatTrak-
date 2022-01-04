@@ -12,4 +12,9 @@ export class SearchUtil {
     let loadIcon = document.querySelector('.spinner');
     loadIcon.classList.toggle('hidden');
   }
+
+  toggleError() {
+    let errorDiv = document.querySelector('.error');
+    errorDiv.classList.toggle('invisible');
+  }
 }

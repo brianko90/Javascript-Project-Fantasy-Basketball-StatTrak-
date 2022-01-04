@@ -112,6 +112,7 @@ export class Util {
     })
     
     div.append(ul);
+
   }
 
   addTableToPlayer(seasons) {
@@ -149,11 +150,14 @@ export class Util {
       const row = document.createElement('tr');
 
       row.classList.add('seasonStats');
-      stats.forEach((stat) => {
+      stats.forEach((stat, i) => {
         row.classList.add('categoryValue');
         const value = document.createElement('td');
         value.classList.add('stat');
         value.textContent = stat;
+        if( i === 1) {
+          value.style = `font-size:inherit; -webkit-text-stroke: 0.5px white; color: ${teamColor[stat]}`;
+        }
         row.append(value);
       })
       table.append(row);
@@ -174,8 +178,8 @@ export class Util {
       datasets: [{
         data: [34.4, 23.7, 8.9, 6.5, 1.3, 54.1, 87.3 ,42.1, 2.9],
         label: "Average of Top 50",
-        backgroundColor: "#FFFFFF",
-        borderColor: "black"
+        backgroundColor: "#FFD700",
+        borderColor: "yellow"
       }]
     }
 
@@ -191,7 +195,30 @@ export class Util {
             text: 'Player Comparison Chart',
             font: {
               size: 20
+            },
+            color: "white"
+          },
+          legend: {
+            labels: {
+              color: 'white'
             }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: "white"
+            }
+          },
+          y: {
+            ticks: {
+              color: "white"
+            }
+          }   
+        },
+        legend: {
+          labels: {
+            color: "white"
           }
         }
       }
@@ -241,6 +268,8 @@ export class Util {
   }
 
   addArticle(player, articles){
+    console.log(articles)
+
     let div = Array.from(document.getElementsByClassName("playerDiv")).pop();
     let articleContainer = document.createElement('div');
     articleContainer.classList.add('articleContainer')

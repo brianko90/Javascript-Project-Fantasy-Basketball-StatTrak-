@@ -53,42 +53,36 @@ table {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/index.css ***!
   \****************************************************************************************************/
 body {
-  background-image: url("/images/background1.png");
-  background-size: 100%;
+
+  background: url("/images/background1.png") no-repeat center center fixed;
+  background-size: cover;
   width: 100vw;
   height: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
 
 .hidden {
   display:none !important;
 }
 
-/* canvas{
-    margin: 0 auto !important;
-} */
-
-#banner {
-  width: 100%;
-  height: 20%;
-}
-
 #logo {
-  width: 80px;
-  height: 80px;
-}
-
-#myChart {
-  display: flexbox;
-  justify-content: center;
+  position: relative;
+  top: -30px;
+  width: 200px;
+  height: 200px;
+  
 }
 
 header {
   display: flex;
   height: 80px;
   justify-content: space-between;
-  background-color: teal;
-  border-bottom: 1px solid gray;
+  /* background-color: teal;
+  border-bottom: 1px solid gray; */
 }
 
 .icon-container {
@@ -97,6 +91,7 @@ header {
 }
 
 .header-right {
+  justify-content: right;
   display: flex;
   margin-right: 10px;
   align-items: center;
@@ -116,32 +111,38 @@ header {
   margin-top: 50px;
 }
 
-.playerDiv {
-  border: 2px solid black;
-  width: 80%;
-  height: auto;
-  display: flex;
-  position: relative;
-  font-family: arial;
-  background-color:darkgray;
-  opacity: 70%;
-}
-
 .chart {
+  margin: auto;
   margin-top: 50px;
-  /* margin-left: 200px; */
-  /* **ASK DIEGO ABOUT CENTERING CHART */
-  position:relative;
-  width: 70vw;
-  background-color: black;
+  display:flex;
+  position: relative;
+  justify-content: center;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.653);
   border-radius: 30px;
-  opacity: 70%;
-  /* justify-content: center;
-  align-items: center; */
+  /* opacity: 80%; */
 }
 
-i > a {
-    text-decoration: none;
+#myChart {
+  display: flex;
+  
+  width: 70%;
+  justify-content: center;
+}
+
+a:visited { 
+ text-decoration: none; 
+ color: black; 
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover { 
+  text-decoration: none; 
+  color:yellow; 
 }
 
 .remove-button {
@@ -155,6 +156,8 @@ i > a {
 .remove-button:hover {
   opacity: 1;
 }
+
+
 /*!***********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/searchButton.css ***!
   \***********************************************************************************************************/
@@ -186,12 +189,13 @@ i > a {
   outline: none;
   border-radius: 15px;
   transition: all .5s ease-in-out;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.475);
   padding-right: 40px;
-  color:black;;
+  color:white;
+  /* opacity: 70%; */
 }
 .input-search::placeholder{
-  color: black;
+  color: white;
   font-size: 18px;
   letter-spacing: 2px;
   border-radius: 15px;
@@ -208,21 +212,22 @@ i > a {
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color:black;
+  color:white;
   background-color:transparent;
-  pointer-events: painted;  
+  pointer-events: painted;
+  opacity: 100% !important;
 }
 .btn-search:focus ~ .input-search{
   width: 300px;
   /* border-radius:50px; */
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.529);
   /* border-bottom:1px solid rgba(255,255,255,.5); */
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
 .input-search:focus{
   width: 300px;
   border-radius: 15px;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.523);
   /* border-bottom:1px solid rgba(255,255,255,.5); */
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
@@ -234,8 +239,8 @@ i > a {
   width: 50px;
   height: 50px; 
   border-radius: 50%;
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid teal;
+  border: 16px solid rgba(0, 0, 0, 0.639);
+  border-top: 16px solid rgb(196, 115, 15);
   animation: spin 2s linear infinite;
 }
 
@@ -248,6 +253,21 @@ i > a {
   }
 
 }
+
+.error {
+  width: 250px;
+  height: 30px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
+.invisible {
+  visibility: hidden;
+}
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/table.css ***!
   \****************************************************************************************************/
@@ -258,13 +278,26 @@ li.name {
 
 .team, .position,
 .dob, .height, .weight {
-  color: gray;
+  color: white;
   font-size: 12px;
 }
 
 .headshot {
   width: 15%;
   height: auto;
+  opacity: 100%;
+}
+
+.playerDiv {
+  border: 2px solid white;
+  width: 80%;
+  height: auto;
+  display: flex;
+  position: relative;
+  font-family: arial;
+  background-color:rgba(0, 0, 0, 0.447);
+  /* opacity: 100%; */
+  color: white;
 }
 
 .playerInfo {
@@ -287,16 +320,23 @@ li.name {
   /* justify-content:left; */
 }
 
-.article-container {
+.articleContainer {
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
+
   width:100px;
+}
+
+a.news-link {
+  text-align: center;
+  color: white;
 }
 
 .cat, .stat {
   display:table-cell;
-  border: 1px solid black;
+  border: 1px solid white;
   text-align: center;
 }
 
