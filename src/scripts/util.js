@@ -20,7 +20,7 @@ const teamColor = {
   'MIN': 'rgba(12, 35, 64)',
   'NO': 'rgba(180, 151, 90)',
   'NY': 'rgba(245, 132, 38)',
-  'BKN': 'rgba(0, 0, 0)',
+  'BKN': 'rgba(255,255,255)',
   'OKC': 'rgba(239, 59, 36)',
   'ORL': 'rgba(0, 125, 197)',
   'PHI': 'rgba(0, 107, 182)',
@@ -173,7 +173,9 @@ export class Util {
       labels: labels,
       datasets: [{
         data: [34.4, 23.7, 8.9, 6.5, 1.3, 54.1, 87.3 ,42.1, 2.9],
-        label: "Average of Top 50"
+        label: "Average of Top 50",
+        backgroundColor: "#FFFFFF",
+        borderColor: "black"
       }]
     }
 
@@ -182,15 +184,19 @@ export class Util {
       data: data,
       options: {
         responsive: true,
+        scaleFontColor: "#FFFFFF",
         plugins: {
           title: {
             display: true,
-            text: 'Player Comparison Chart'
+            text: 'Player Comparison Chart',
+            font: {
+              size: 20
+            }
           }
         }
       }
     }
-
+    
     const myChart = new Chart(ctx, config);
     return myChart;
   }
@@ -235,26 +241,33 @@ export class Util {
   }
 
   addArticle(player, articles){
-    if (articles.length === 0) return;
     let div = Array.from(document.getElementsByClassName("playerDiv")).pop();
     let articleContainer = document.createElement('div');
-    articleContainer.innerText = "Recent News";
     articleContainer.classList.add('articleContainer')
-    if (articles.length > 2) {
-      for(let i=0; i<3; i++) {
-        let articleA = document.createElement('a');
-        articleA.innerText = article.title;
-        articleA.href = article.url;
-        articleContainer.appendChild(articleA);
-      }
+    let article = document.createElement('a');
+    article.innerText = "Recent News"
+    article.setAttribute('target', '_blank');
+    article.classList.add('news-link')
+    
+    if (articles.length > 0) {
+      article.href = articles[0].url;
+    //   for(let i=0; i<3; i++) {
+    //     let articleA = document.createElement('a');
+    //     articleA.innerText = article.title;
+    //     articleA.href = article.url;
+    //     articleContainer.appendChild(articleA);
+    //   }
+    // } else {
+    //   articles.forEach((article, i) => {
+    //     let articleA = document.createElement('a');
+    //     articleA.innerText = `Story ${i + 1}`
+    //     articleA.href = article.url;
+    //     articleContainer.appendChild(articleA);
+    //   })
     } else {
-      articles.forEach((article, i) => {
-        let articleA = document.createElement('a');
-        articleA.innerText = `Story ${i + 1}`
-        articleA.href = article.url;
-        articleContainer.appendChild(articleA);
-      })
+      article.href = '#';
     }
+    articleContainer.appendChild(article);
     div.append(articleContainer);
   }
 }

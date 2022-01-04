@@ -1,18 +1,53 @@
-/* main {
-  justify-content: center;
-} */
-.hidden {
-  display:none;
+body {
+  background-image: url("/images/background1.png");
+  background-size: 100%;
+  width: 100vw;
+  height: 100%;
 }
+
+
+.hidden {
+  display:none !important;
+}
+
+/* canvas{
+    margin: 0 auto !important;
+} */
 
 #banner {
   width: 100%;
   height: 20%;
 }
 
-/* #search {
-  margin-top: 100px;
-} */
+#logo {
+  width: 80px;
+  height: 80px;
+}
+
+#myChart {
+  display: flexbox;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  background-color: teal;
+  border-bottom: 1px solid gray;
+}
+
+.icon-container {
+  width:5%;
+  margin: 10px;
+}
+
+.header-right {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  padding: 20px;
+}
 
 #main-search {
   display: block;
@@ -29,20 +64,29 @@
 
 .playerDiv {
   border: 2px solid black;
-  width: 100%;
+  width: 80%;
   height: auto;
   display: flex;
   position: relative;
   font-family: arial;
+  background-color:darkgray;
+  opacity: 70%;
 }
 
 .chart {
   margin-top: 50px;
+  /* margin-left: 200px; */
+  /* **ASK DIEGO ABOUT CENTERING CHART */
   position:relative;
   width: 70vw;
+  background-color: black;
+  border-radius: 30px;
+  opacity: 70%;
+  /* justify-content: center;
+  align-items: center; */
 }
 
-a {
+i > a {
     text-decoration: none;
 }
 

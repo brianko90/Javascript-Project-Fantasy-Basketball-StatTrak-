@@ -10,58 +10,45 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="icon" href="/images/logo.ico">
     <title>Fantasy Basketball StatTrak</title>
   </head>
 
   <body>
     <header>
-      <img src="/images/mainBanner2.png" id="banner">
+      <img src="/images/logo3.png" id="logo">
+      <div>Fantasy Basketball StatTrak</div>
+      <div class="header-right">
+        <div class="icon-container">
+          <a href="https://github.com/brianko90/Javascript-Project-Fantasy-Basketball-StatTrak-" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+        </div>
+        <div class="icon-container">
+          <a href="https://www.linkedin.com/in/brian-ko-ba5742229/" target="_blank">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+        <div class="icon-container">
+          <i class="fas fa-info-circle fa-2x"></i>
+        </div>
+      </div>
     </header>
     <div class="page-container">
-      <nav class="nav">
-        <div class="nav-link">
-          <div class="nav-container">
-            <i class="fas fa-info-circle fa-2x">Info</i>
-          </div>
-          <span class="nav-label">Info</span>
-        </div>
-        <div class="nav-link">
-          <div class="nav-container">
-            <a href="https://www.linkedin.com/in/brian-ko-ba5742229/" target="_blank">
-              <i class="fab fa-linkedin fa-2x">LinkedIn</i>
-            </a>
-          </div>
-          <span class="nav-label">LinkedIn</span>
-        </div>
-        <div class="nav-link">
-          <div class="nav-container">
-            <a href="https://github.com/brianko90/Javascript-Project-Fantasy-Basketball-StatTrak-" target="_blank">
-              <i class="fab fa-github fa-2x">GitHub</i>
-            </a>
-          </div>
-          <span class="nav-label">GitHub</span>
-        </div>
-      </nav>
       <main>
-        <!-- *** Put in a sidebar with website info, contact info etc *** -->
         <div id="search">
           <form class="search-box" id="main-search">
             <button class="button btn-search"><i class="fas fa-search"></i></button>
             <input type="text" id="player-name" class="input-search" placeholder="">
           </form>
           <div class="spinner hidden"></div>
-        </div>
-       
-        <!-- **********Chart Here -->
+        </div>    
         <div class="chart">
           <canvas id="myChart"></canvas>
         </div>
-        <!-- **********Chart Here -->
-        <!-- ********* Where I'm Adding Players-->
         <section id="player-view">
         
         </section>
-        <!-- ********* -->
       </main>
       
     </div>

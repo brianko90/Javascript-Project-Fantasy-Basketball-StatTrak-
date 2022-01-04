@@ -25,25 +25,26 @@ li.name {
 
 .table {
   display:table;
-  width:100%;
+  width:80%;
   table-layout: fixed;
   font-size: 15px;
   /* border-top: none;
   border-bottom: none; */
   text-align: center;
+  /* justify-content:left; */
 }
 
 .article-container {
   display: flex;
   flex-direction: column;
-  text-align:center;
-  vertical-align: middle;
-  width:15%;
+  align-content: center;
+  width:100px;
 }
 
 .cat, .stat {
   display:table-cell;
   border: 1px solid black;
+  text-align: center;
 }
 
 .categoryLabel {
@@ -55,4 +56,9 @@ li.name {
 .firstCol {
   width:10%;
 }
+
+.news-link {
+  text-decoration: none !important;
+}
+
 
