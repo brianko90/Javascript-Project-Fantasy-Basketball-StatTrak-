@@ -103,9 +103,11 @@ export class Util {
     let height = `${player.height}`;
     let weight = `${player.weight}`;
     let info = [name, team, position, dob, height, weight];
-    info.forEach((el) => {
+    let className = ['name', 'team', 'position', 'dob', 'height', 'weight'];
+    info.forEach((el, i) => {
       let li = document.createElement('li');
       li.innerText = el;
+      li.classList.add(className[i]);
       ul.appendChild(li);
     })
     
@@ -118,10 +120,13 @@ export class Util {
     const table = document.createElement('table');
     table.classList.add('table');
     const row = document.createElement('tr');
-    categories.forEach((cat) => {
-      row.classList.add('categoryLabel')
-      const label = document.createElement('th')
-      label.classList.add('cat')
+    categories.forEach((cat, i) => {
+      row.classList.add('categoryLabel');
+      const label = document.createElement('th');
+      if(i === 0) {
+        label.classList.add('firstCol');
+      }
+      label.classList.add('cat');
       label.textContent = cat;
       row.append(label);
     })
@@ -129,18 +134,18 @@ export class Util {
     let i = seasons.length - 1;
     while (i>=0 && i>seasons.length-4) {
       const stats = [`${seasons[i].season}`,
-      `${seasons[i].team}`,
-      `${seasons[i].gamesPlayed}`,
-      `${seasons[i].gamesStarted}`,
-      `${seasons[i].minsPerGame}`,
-      `${seasons[i].pointsPerGame}`,
-      `${seasons[i].reboundsPerGame}`,
-      `${seasons[i].assistsPerGame}`,
-      `${seasons[i].blocksPerGame}`,
-      `${seasons[i].percentageFieldGoal}`,
-      `${seasons[i].percentageFreeThrow}`,
-      `${seasons[i].percentageThree}`,
-      `${seasons[i].turnoversPerGame}`]
+                  `${seasons[i].team}`,
+                  `${seasons[i].gamesPlayed}`,
+                  `${seasons[i].gamesStarted}`,
+                  `${seasons[i].minsPerGame}`,
+                  `${seasons[i].pointsPerGame}`,
+                  `${seasons[i].reboundsPerGame}`,
+                  `${seasons[i].assistsPerGame}`,
+                  `${seasons[i].blocksPerGame}`,
+                  `${seasons[i].percentageFieldGoal}`,
+                  `${seasons[i].percentageFreeThrow}`,
+                  `${seasons[i].percentageThree}`,
+                  `${seasons[i].turnoversPerGame}`]
       const row = document.createElement('tr');
 
       row.classList.add('seasonStats');
@@ -230,10 +235,10 @@ export class Util {
   }
 
   addArticle(player, articles){
-    console.log(articles);
     if (articles.length === 0) return;
     let div = Array.from(document.getElementsByClassName("playerDiv")).pop();
     let articleContainer = document.createElement('div');
+    articleContainer.innerText = "Recent News";
     articleContainer.classList.add('articleContainer')
     if (articles.length > 2) {
       for(let i=0; i<3; i++) {
@@ -243,9 +248,9 @@ export class Util {
         articleContainer.appendChild(articleA);
       }
     } else {
-      articles.forEach((article) => {
+      articles.forEach((article, i) => {
         let articleA = document.createElement('a');
-        articleA.innerText = article.title;
+        articleA.innerText = `Story ${i + 1}`
         articleA.href = article.url;
         articleContainer.appendChild(articleA);
       })

@@ -1,0 +1,76 @@
+:root {
+  --nav-icon-width: 50px;
+  --nav-border-width: 8px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  height: inherit;
+  display: flex;
+}
+
+.main {
+  height: inherit;
+  padding: 0;
+  padding-left: var(--nav-border-width);
+  overflow-y: auto;
+}
+
+.nav {
+  width: 200px;
+  height: inherit;
+  position: relative;
+  background-color: lightgray;
+  transition: width 0.2s;
+  flex-shrink: 0;
+}
+
+.nav--collapsed {
+  width: var(--nav-icon-width);
+
+}
+
+.nav--collapsed .nav-label {
+  display: none;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: var(--nav-icon-width);
+  height: var(--nav-icon-height);
+  flex-shrink: 0;
+}
+
+.nav-container:hover {
+  background-color: gray;
+}
+
+.nav-border {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: var(--nav-border-width);
+  height: inherit;
+  background-color: gray;
+  transition: background-color 0.2s;
+  cursor: ew-resize;
+}
+
+.nav-border:hover {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: var(--nav-border-width);
+  height: inherit;
+  background-color: gray;
+  transition: background-color 0.2s;
+  cursor: ew-resize;
+}
+
+

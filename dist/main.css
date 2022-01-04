@@ -1,40 +1,75 @@
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
-body::after {
-  background-color: url("/images/basketballbackground.png");
-  opacity: 0.5;
-}
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/reset.css ***!
+  \****************************************************************************************************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-.my-info-nav {
-  display: flex;
-  justify-content: right;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/index.css ***!
+  \****************************************************************************************************/
+/* main {
+  justify-content: center;
+} */
+.hidden {
+  display:none;
 }
 
 #banner {
   width: 100%;
-  height: auto;
+  height: 20%;
 }
 
-.contact-info {
-  display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
-  text-align: center;
-}
-
-.contact {
-  margin: 0.5em;
-}
-
-.category-bar {
-  display: none;
-  list-style-type: none;
-  justify-content: space-evenly;
-}
+/* #search {
+  margin-top: 100px;
+} */
 
 #main-search {
-  display: flex;
+  display: block;
   justify-content: center;
 }
 
@@ -43,6 +78,7 @@ body::after {
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .playerDiv {
@@ -50,65 +86,74 @@ body::after {
   width: 100%;
   height: auto;
   display: flex;
-}
-
-.headshot {
-  width: 20%;
-  height: auto;
-}
-
-.categoryLabel {
-  background-color: grey;
-  justify-content: space-evenly;
-}
-
-.cat, .stat {
-  border: 1px solid black;
+  position: relative;
+  font-family: arial;
 }
 
 .chart {
-  position: relative;
-  width: 80vw;
+  margin-top: 50px;
+  position:relative;
+  width: 70vw;
 }
 
-#search {
-  margin: 0px;
+a {
+    text-decoration: none;
+}
+
+.remove-button {
+  position: absolute;
+  left: 99%;
+  cursor: pointer;
+  font-family: arial;
+  opacity: 0.5;
+}
+
+.remove-button:hover {
+  opacity: 1;
+}
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/searchButton.css ***!
+  \***********************************************************************************************************/
+#search{
+  margin-top: 50px;
   padding: 0px;
+  /* width: 100vw;
+  height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Lato" !important;
+  /* background-color: #130f40; */
+  font-family: 'Lato' !important;
 }
 
-.search-box {
+.search-box{
   width: fit-content;
   height: fit-content;
   position: relative;
+  
 }
-
-.input-search {
+.input-search{
   height: 50px;
   width: 50px;
-  border-style: none;
+  border: 1px solid black;
   padding: 10px;
   font-size: 18px;
   letter-spacing: 2px;
   outline: none;
-  border-radius: 50%;
-  transition: all 0.5s ease-in-out;
+  border-radius: 15px;
+  transition: all .5s ease-in-out;
   background-color: grey;
   padding-right: 40px;
-  color: black;
+  color:black;;
 }
-
-.input-search::placeholder {
+.input-search::placeholder{
   color: black;
   font-size: 18px;
   letter-spacing: 2px;
+  border-radius: 15px;
   font-weight: 100;
 }
-
-.btn-search {
+.btn-search{
   width: 50px;
   height: 50px;
   border-style: none;
@@ -119,27 +164,189 @@ body::after {
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  color: black;
-  background-color: transparent;
-  pointer-events: painted;
+  color:black;
+  background-color:transparent;
+  pointer-events: painted;  
 }
-
-.btn-search:focus ~ .input-search {
+.btn-search:focus ~ .input-search{
   width: 300px;
-  border-radius: 0px;
+  /* border-radius:50px; */
   background-color: grey;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  /* border-bottom:1px solid rgba(255,255,255,.5); */
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
-
-.input-search:focus {
+.input-search:focus{
   width: 300px;
-  border-radius: 0px;
+  border-radius: 15px;
   background-color: grey;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  /* border-bottom:1px solid rgba(255,255,255,.5); */
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
-
-* {
+*{
   box-sizing: border-box;
 }
+
+.spinner {
+  width: 120px;
+  height: 120px; 
+  border-radius: 50%;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid teal;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/sidebar.css ***!
+  \******************************************************************************************************/
+:root {
+  --nav-icon-width: 50px;
+  --nav-border-width: 8px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  height: inherit;
+  display: flex;
+}
+
+.main {
+  height: inherit;
+  padding: 0;
+  padding-left: var(--nav-border-width);
+  overflow-y: auto;
+}
+
+.nav {
+  width: 200px;
+  height: inherit;
+  position: relative;
+  background-color: lightgray;
+  transition: width 0.2s;
+  flex-shrink: 0;
+}
+
+.nav--collapsed {
+  width: var(--nav-icon-width);
+
+}
+
+.nav--collapsed .nav-label {
+  display: none;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: var(--nav-icon-width);
+  height: var(--nav-icon-height);
+  flex-shrink: 0;
+}
+
+.nav-container:hover {
+  background-color: gray;
+}
+
+.nav-border {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: var(--nav-border-width);
+  height: inherit;
+  background-color: gray;
+  transition: background-color 0.2s;
+  cursor: ew-resize;
+}
+
+.nav-border:hover {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: var(--nav-border-width);
+  height: inherit;
+  background-color: gray;
+  transition: background-color 0.2s;
+  cursor: ew-resize;
+}
+
+
+
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/table.css ***!
+  \****************************************************************************************************/
+li.name {
+  font-weight:500;
+  text-decoration: underline;
+}
+
+.team, .position,
+.dob, .height, .weight {
+  color: gray;
+  font-size: 12px;
+}
+
+.headshot {
+  width: 15%;
+  height: auto;
+}
+
+.playerInfo {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.table {
+  display:table;
+  width:100%;
+  table-layout: fixed;
+  font-size: 15px;
+  /* border-top: none;
+  border-bottom: none; */
+  text-align: center;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  vertical-align: middle;
+  width:15%;
+}
+
+.cat, .stat {
+  display:table-cell;
+  border: 1px solid black;
+}
+
+.categoryLabel {
+  background-color: grey;
+  justify-content:space-evenly;
+
+}
+
+.firstCol {
+  width:10%;
+}
+
+
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+

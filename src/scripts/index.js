@@ -1,28 +1,34 @@
 import {Fetch} from './fetch.js';
 import {Util} from './util.js';
-
+import {Button} from './buttonUtil.js';
+import { SearchUtil } from './searchUtil.js';
 document.addEventListener("DOMContentLoaded", e => {
-  console.log("dom ready")
-  let fetchUtil = new Fetch();
+  // let sidebar = document.
+  let search = new SearchUtil();
+  let fetch = new Fetch();
   let util = new Util();
   
   let searchForm = document.querySelector('#main-search');
-  let player = [];
-  const chart = util.makeGraph();
+  const chart = util.makeGraph(); 
+
   searchForm.addEventListener("submit", async e => {
     e.preventDefault();
+    search.toggleSearch();
+    search.toggleSpinner();
     const nameInput = document.querySelector('#player-name');
     const playerName = nameInput.value;
     nameInput.value = '';
-    let player = await fetchUtil.fetchPlayer(playerName);
-    let seasons = await fetchUtil.fetchSeasons(player.id);
-    let articles = await fetchUtil.fetchArticle(player);
+    let player = await fetch.fetchPlayer(playerName);
+    let seasons = await fetch.fetchSeasons(player.id);
+    let articles = await fetch.fetchArticle(player);
+    // put code to make loading circle disappear and search bar appear
     util.listPlayer(player);
     util.addSeasons(seasons);
+    util.addArticle(player, articles);
     util.addRemoveButton(player, chart);
     util.addDataToGraph(chart, player, seasons);
-    util.addArticle(player, articles);
+    search.toggleSearch();
+    search.toggleSpinner();
   })
   
 })
-

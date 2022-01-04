@@ -5,11 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <title>Fantasy Basketball StatTrak</title>
@@ -18,37 +16,55 @@
   <body>
     <header>
       <img src="/images/mainBanner2.png" id="banner">
-      <nav class="my-info-nav">
-        <ul class="contact-info">
-          <!-- Change these into <a> tags later -->
-          <li class="contact"><a href="">GitHub</a></li> 
-          <li class="contact"><a href="">LinkedIn</a></li>
-          <li class="contact"><a href="">bako2466@gmail.com</a></li>
-        </ul>
-      </nav>
     </header>
-    <div id="search">
-      <form class="search-box" id="main-search"> 
-        <button class="button btn-search"><i class="fas fa-search"></i></button>
-        <input type="text" id="player-name" class="input-search" placeholder="">
-      </form>
+    <div class="page-container">
+      <nav class="nav">
+        <div class="nav-link">
+          <div class="nav-container">
+            <i class="fas fa-info-circle fa-2x">Info</i>
+          </div>
+          <span class="nav-label">Info</span>
+        </div>
+        <div class="nav-link">
+          <div class="nav-container">
+            <a href="https://www.linkedin.com/in/brian-ko-ba5742229/" target="_blank">
+              <i class="fab fa-linkedin fa-2x">LinkedIn</i>
+            </a>
+          </div>
+          <span class="nav-label">LinkedIn</span>
+        </div>
+        <div class="nav-link">
+          <div class="nav-container">
+            <a href="https://github.com/brianko90/Javascript-Project-Fantasy-Basketball-StatTrak-" target="_blank">
+              <i class="fab fa-github fa-2x">GitHub</i>
+            </a>
+          </div>
+          <span class="nav-label">GitHub</span>
+        </div>
+      </nav>
+      <main>
+        <!-- *** Put in a sidebar with website info, contact info etc *** -->
+        <div id="search">
+          <form class="search-box" id="main-search">
+            <button class="button btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" id="player-name" class="input-search" placeholder="">
+          </form>
+          <div class="spinner hidden"></div>
+        </div>
+       
+        <!-- **********Chart Here -->
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+        <!-- **********Chart Here -->
+        <!-- ********* Where I'm Adding Players-->
+        <section id="player-view">
+        
+        </section>
+        <!-- ********* -->
+      </main>
+      
     </div>
-    <!-- <form id="main-search">
-      <label>Search for Player:
-        <input type="text" name="player[name]" id="player-name">
-        <button class="button">Search</button>
-      </label>
-    </form> -->
-    <!-- **********Chart Here -->
-    <div class="chart">
-      <canvas id="myChart"></canvas>
-    </div>
-    <!-- **********Chart Here -->
-    <!-- ********* Where I'm Adding Players-->
-    <section id="player-view">
-
-    </section>
-    <!-- ********* -->
   </body>
 
 </html>

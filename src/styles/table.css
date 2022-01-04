@@ -1,0 +1,58 @@
+li.name {
+  font-weight:500;
+  text-decoration: underline;
+}
+
+.team, .position,
+.dob, .height, .weight {
+  color: gray;
+  font-size: 12px;
+}
+
+.headshot {
+  width: 15%;
+  height: auto;
+}
+
+.playerInfo {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.table {
+  display:table;
+  width:100%;
+  table-layout: fixed;
+  font-size: 15px;
+  /* border-top: none;
+  border-bottom: none; */
+  text-align: center;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  vertical-align: middle;
+  width:15%;
+}
+
+.cat, .stat {
+  display:table-cell;
+  border: 1px solid black;
+}
+
+.categoryLabel {
+  background-color: grey;
+  justify-content:space-evenly;
+
+}
+
+.firstCol {
+  width:10%;
+}
+
