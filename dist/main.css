@@ -303,7 +303,7 @@ visibility: hidden;
 }
 
 .dropContent {
-  background-color: rgba(0, 0, 0, 0.68);
+  background-color: rgba(0, 0, 0, 0.817);
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -319,13 +319,13 @@ visibility: hidden;
 
 .teamDiv {
   display: flex;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   align-items: center;
   font-family: arial;
 }
 
 .teamDiv:hover {
-  box-shadow: 2px 2px #CC5500;
+  box-shadow: 0px 2px #CC5500;
 } 
 
 .dropButton {
@@ -334,6 +334,7 @@ visibility: hidden;
   font-family: arial;
   font-size: 20px;
   vertical-align: middle;
+  margin-bottom: 12px;
 }
 
 .dropdown {
@@ -380,7 +381,7 @@ li.name {
   font-family: arial;
   background-color:rgba(0, 0, 0, 0.447);
   color: white;
-  z-index: 0;
+  z-index: -1;
 }
 
 .playerInfo {
@@ -409,6 +410,7 @@ li.name {
   align-items: center;
   justify-content: center;
   width:100px;
+  /* z-index: 1 !important; */
 }
 
 a.news-link {
@@ -432,6 +434,10 @@ a.news-link {
 
 .news-link {
   text-decoration: none !important;
+}
+
+.remove-button {
+  z-index: 1 !important;
 }
 /*!***************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/icon.css ***!
@@ -540,8 +546,8 @@ a.news-link {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: rgba(0, 0, 0, 0.625);
-  margin: 15% auto; /* 15% from the top and centered */
+  background-color: rgba(0, 0, 0, 0.776);
+  margin: 5% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
@@ -559,7 +565,7 @@ a.news-link {
 
 .close:hover,
 .close:focus {
-  color: black;
+  color: #CC5500;
   text-decoration: none;
   cursor: pointer;
 }
@@ -572,16 +578,14 @@ a.news-link {
 
 .modal-body {
   margin: auto;
-  /* justify-content: center;
-  text-align: center; */
   margin-top: 20px;
   font-size: 16px;
   width: 80%;
 }
 
 .modal-body > p {
-  margin-top: 10px;
-  line-height: 20px;
+  margin-top: 15px;
+  line-height: 25px;
 }
 
 .modal-body > h2 {
@@ -589,6 +593,20 @@ a.news-link {
   color: #CC5500;
 }
 
+#p5 {
+  text-align: center;
+  font-style: italic;
+}
+
+#p6 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+#modalH22 {
+  text-align: center;
+}
 
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

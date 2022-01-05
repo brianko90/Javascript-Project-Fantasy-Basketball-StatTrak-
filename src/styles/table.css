@@ -24,7 +24,7 @@ li.name {
   font-family: arial;
   background-color:rgba(0, 0, 0, 0.447);
   color: white;
-  z-index: 0;
+  z-index: -1;
 }
 
 .playerInfo {
@@ -53,6 +53,7 @@ li.name {
   align-items: center;
   justify-content: center;
   width:100px;
+  /* z-index: 1 !important; */
 }
 
 a.news-link {
@@ -76,4 +77,8 @@ a.news-link {
 
 .news-link {
   text-decoration: none !important;
+}
+
+.remove-button {
+  z-index: 1 !important;
 }
