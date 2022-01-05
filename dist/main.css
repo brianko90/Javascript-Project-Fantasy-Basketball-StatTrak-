@@ -1,6 +1,3 @@
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/reset.css ***!
-  \****************************************************************************************************/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,11 +46,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/index.css ***!
-  \****************************************************************************************************/
 body {
-  background: url("./src/images/background1.png") no-repeat center center fixed;
+  background: url("src/images/background1.png") no-repeat center center fixed;
   background-size: cover;
   width: 100vw;
   height: 100%;
@@ -178,9 +172,6 @@ a {
   vertical-align: middle;
   text-align: center;
 }
-/*!***********************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/searchButton.css ***!
-  \***********************************************************************************************************/
 #search{
   margin-top: 50px;
   padding: 0px;
@@ -289,9 +280,6 @@ a {
 .invisible {
 visibility: hidden;
 }
-/*!*******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/dropdown.css ***!
-  \*******************************************************************************************************/
 .teamLogo {
   width: 30px;
   height: 30px;
@@ -352,9 +340,6 @@ visibility: hidden;
   border-radius: 5px;
   color: #CC5500;
 }
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/table.css ***!
-  \****************************************************************************************************/
 li.name {
   font-weight:500;
   text-decoration: underline;
@@ -439,9 +424,6 @@ a.news-link {
 .remove-button {
   z-index: 1 !important;
 }
-/*!***************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/icon.css ***!
-  \***************************************************************************************************/
 .fa-github:hover {
   animation: git-flip 2s ease-in-out infinite; 
 }
@@ -527,9 +509,6 @@ a.news-link {
 .fa-bars:hover {
   cursor: pointer;
 }
-/*!****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/modal.css ***!
-  \****************************************************************************************************/
 .modal {
   display: none; 
   position: fixed; 
@@ -606,7 +585,6 @@ a.news-link {
   text-align: center;
 }
 
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
 
+
+/*# sourceMappingURL=main.css.map*/
