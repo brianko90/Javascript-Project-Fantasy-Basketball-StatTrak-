@@ -19,7 +19,7 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 
 ## WireFrames
 
-![Wireframe1](http://url/to/wireframe1.png)
+![Wireframe1](./src/images/wireframe1.png)
 
 - This will be the most important part since it displays the most information and data.
 - The nav links will let users access my information.
