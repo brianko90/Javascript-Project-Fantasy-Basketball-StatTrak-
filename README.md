@@ -26,7 +26,7 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 - On the right side, there is a mock team creator, where you can add players from the main search area by pressing the (+) next to player. 
 - Each of the statistical categories will be displayed above the player slots. 
 - When you click on each player, there will be a popup window that will display the past years statistics of the player and a graph showing their average stats relative to the league/position average.
-![Wireframe2](./src/images/wireframe2.png)
+![Wireframe2](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/wireframe2.png)
 
 ## Technologies, Libraries, APIs
 
