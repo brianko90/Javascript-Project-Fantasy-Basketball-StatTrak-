@@ -329,7 +329,8 @@ export class Util {
       teamA.innerText = team.name;
       teamDiv.appendChild(teamA);
       teamA.href = teamUrl[i];
-      teamDropdown.append(teamDiv)
+      teamA.setAttribute("target", "_blank");
+      teamDropdown.append(teamDiv);
     })
   }
 }

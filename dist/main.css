@@ -309,8 +309,9 @@ visibility: hidden;
   border-radius: 20px;
   position: absolute;
   top: 115%;
-  width: 230px;
+  width: 270px;
   z-index: 1;
+  padding: 20px;
 }
 
 .teamDiv > a{
@@ -531,6 +532,11 @@ a.news-link {
 
 .fa-bars:hover {
   cursor: pointer;
+}
+
+.icon-container > a {
+  text-decoration: none;
+  color: black;
 }
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/modal.css ***!

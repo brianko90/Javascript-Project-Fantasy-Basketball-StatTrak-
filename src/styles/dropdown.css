@@ -15,8 +15,9 @@
   border-radius: 20px;
   position: absolute;
   top: 115%;
-  width: 230px;
+  width: 270px;
   z-index: 1;
+  padding: 20px;
 }
 
 .teamDiv > a{
