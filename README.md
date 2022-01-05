@@ -19,7 +19,7 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 
 ## WireFrames
 
-![Wireframe1](./src/images/wireframe1.png)
+![Wireframe1](http://url/to/wireframe1.png)
 
 - This will be the most important part since it displays the most information and data.
 - The nav links will let users access my information.
@@ -55,16 +55,3 @@ If time allows during the project coursetime, or for future updates after:
 
 - Add an age warning, where the age of a player shown is in a different color based on their age relative to the average age when players usually start to decline (over AVG: red, within 1-2 years of AVG: yellow, well below AVG: green)
 - Add a stat drop off warning, if a players statistics have been steadily dropping over the past three seasons. We could display a warning next to the players name that he has been steadily declining in performance. 
-
-
-<ul id="modalList">Some features of this website are:
-            <li>Search for current NBA players to display their average statistics</li>
-            <li>Compare that data against the average of the top 50 players of each category</li>
-            <li>Add more players through the search to compare against eachother</li>
-            <li>Upon search, the players card is displayed below the graph</li>
-            <li>This player card displays their last three seasons statistical averages and general player info</li>
-            <li>Each player card has a button to view a recent news article about the player</li>
-            <li>If you no longer wish to view the player, you can click the trash bin icon to remove him</li>
-            <li>The dropdown menu in the left corner has all NBA teams that you can click to visit the team website</li>
-          </ul>
-          
