@@ -8,9 +8,13 @@ document.addEventListener("DOMContentLoaded", async e => {
   let util = new Util();
   let teams = await fetch.fetchTeams()
   util.addTeamsToDropdown(teams)
-  let searchForm = document.querySelector('#main-search');
+
+  let dropdownButton = document.querySelector('.dropdown');
+  dropdownButton.addEventListener("click", search.toggleDropdown);
+  
   const chart = util.makeGraph(); 
 
+  let searchForm = document.querySelector('#main-search');
   searchForm.addEventListener("submit", async e => {
     e.preventDefault();
     search.toggleSearch();

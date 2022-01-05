@@ -42,34 +42,30 @@ const teamUrl = [
   'https://www.espn.com/nba/team/roster/_/name/mia/miami-heat',
   'https://www.espn.com/nba/team/roster/_/name/phi/philadelphia-76ers',
   'https://www.espn.com/nba/team/roster/_/name/gs/golden-state-warriors',
-  'HOU',
-  'IND',
-  'LAC',
-  'LAL',
-  'MEM',
-  'MIA',
-  'MIL',
-  'MIN',
-  'NO',
-  'NY',
-  'BKN',
-  'OKC',
-  'ORL',
-  'PHI',
-  'PHX',
-  'POR',
-  'SAC',
-  'SA',
-  'TOR',
-  'UTAH',
-  'WSH'
+  'https://www.espn.com/nba/team/roster/_/name/mem/memphis-grizzlies',
+  'https://www.espn.com/nba/team/roster/_/name/det/detroit-pistons',
+  'https://www.espn.com/nba/team/roster/_/name/lac/la-clippers',
+  'https://www.espn.com/nba/team/roster/_/name/cle/cleveland-cavaliers',
+  'https://www.espn.com/nba/team/roster/_/name/no/new-orleans-pelicans',
+  'https://www.espn.com/nba/team/roster/_/name/den/denver-nuggets',
+  'https://www.espn.com/nba/team/roster/_/name/cha/charlotte-hornets',
+  'https://www.espn.com/nba/team/roster/_/name/ind/indiana-pacers',
+  'https://www.espn.com/nba/team/roster/_/name/bos/boston-celtics',
+  'https://www.espn.com/nba/team/roster/_/name/por/portland-trail-blazers',
+  'https://www.espn.com/nba/team/roster/_/name/phx/phoenix-suns',
+  'https://www.espn.com/nba/team/roster/_/name/ny/new-york-knicks',
+  'https://www.espn.com/nba/team/roster/_/name/bkn/brooklyn-nets',
+  'https://www.espn.com/nba/team/roster/_/name/mil/milwaukee-bucks',
+  'https://www.espn.com/nba/team/roster/_/name/hou/houston-rockets',
+  'https://www.espn.com/nba/team/roster/_/name/min/minnesota-timberwolves',
+  'https://www.espn.com/nba/team/roster/_/name/chi/chicago-bulls',
+  'https://www.espn.com/nba/team/roster/_/name/okc/oklahoma-city-thunder',
+  'https://www.espn.com/nba/team/roster/_/name/dal/dallas-mavericks',
+  'https://www.espn.com/nba/team/roster/_/name/utah/utah-jazz',
+  'https://www.espn.com/nba/team/roster/_/name/tor/toronto-raptors'
 ]
   
 export class Util {
-  
-  // constructor() {
-  //   let fetch = new Fetch();
-  // }
 
   listPlayer(player) {
     let playerView = document.querySelector('#player-view');
@@ -340,5 +336,25 @@ export class Util {
       teamDropdown.append(teamDiv)
     })
     // teamDropdown.append(teamA)
+  }
+
+
+
+  addTeamsToDropdown(teams) {
+    let teamDropdown = Array.from(document.getElementsByClassName('dropContent'))[0];
+
+    teams.forEach((team, i) => {
+      let teamDiv = document.createElement('div');
+      teamDiv.classList.add("teamDiv");
+      let teamA = document.createElement('a');
+      let teamImg = document.createElement('img');
+      teamImg.src = team.teamLogoUrl;
+      teamImg.classList.add('teamLogo');
+      teamDiv.appendChild(teamImg);
+      teamA.innerText = team.name;
+      teamDiv.appendChild(teamA);
+      teamA.href = teamUrl[i];
+      teamDropdown.append(teamDiv)
+    })
   }
 }

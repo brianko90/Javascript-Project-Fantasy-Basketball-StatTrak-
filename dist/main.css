@@ -52,8 +52,8 @@ table {
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/index.css ***!
   \****************************************************************************************************/
-body {
 
+body {
   background: url("/images/background1.png") no-repeat center center fixed;
   background-size: cover;
   width: 100vw;
@@ -71,29 +71,18 @@ body {
 
 #logo {
   position: relative;
-  top: -30px;
   width: 150px;
   height: 150px;
-  
 }
 
 .header-container {
   display: flex;
   height: 80px;
   justify-content: space-evenly;
-  /* margin: auto; */
-  /* background-color: teal;
-  border-bottom: 1px solid gray; */
-}
-
-.header-center {
-  margin: auto;
-  text-align: center;
-  align-items: center;
 }
 
 .page-container {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .icon-container {
@@ -101,9 +90,17 @@ body {
   margin: 10px;
 }
 
-
 .header-right {
+  width: 33.33%;
   justify-content: right;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-left {
+  width: 33.33%;
   display: flex;
   margin-right: 10px;
   align-items: center;
@@ -116,6 +113,8 @@ body {
 }
 
 .header-center {
+  width: 33.33%;
+  display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -131,36 +130,33 @@ body {
 
 .chart {
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   display:flex;
   position: relative;
   justify-content: center;
   width: 60%;
   background-color: rgba(0, 0, 0, 0.653);
   border-radius: 30px;
-  /* opacity: 80%; */
 }
 
 #myChart {
   display: flex;
-  
   width: 70%;
   justify-content: center;
 }
 
-a:visited { 
- text-decoration: none; 
- color: black; 
-}
-
-a {
+a:visited {
   text-decoration: none;
   color: black;
 }
 
-a:hover { 
-  text-decoration: none; 
-  color:yellow; 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color:yellow;
 }
 
 .remove-button {
@@ -174,8 +170,6 @@ a:hover {
 .remove-button:hover {
   opacity: 1;
 }
-
-
 /*!***********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/searchButton.css ***!
   \***********************************************************************************************************/
@@ -206,6 +200,7 @@ a:hover {
   padding-right: 40px;
   color:white;
 }
+
 .input-search::placeholder{
   color: white;
   font-size: 18px;
@@ -213,6 +208,7 @@ a:hover {
   border-radius: 15px;
   font-weight: 100;
 }
+
 .btn-search{
   width: 50px;
   height: 50px;
@@ -229,27 +225,27 @@ a:hover {
   pointer-events: painted;
   opacity: 100% !important;
 }
+
 .btn-search:focus ~ .input-search{
   width: 300px;
-  /* border-radius:50px; */
   background-color: rgba(0, 0, 0, 0.529);
-  /* border-bottom:1px solid rgba(255,255,255,.5); */
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
+
 .input-search:focus{
   width: 300px;
   border-radius: 15px;
   background-color: rgba(0, 0, 0, 0.523);
-  /* border-bottom:1px solid rgba(255,255,255,.5); */
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
+
 *{
   box-sizing: border-box;
 }
 
 .spinner {
   width: 50px;
-  height: 50px; 
+  height: 50px;
   border-radius: 50%;
   border: 16px solid rgba(0, 0, 0, 0.639);
   border-top: 16px solid rgb(196, 115, 15);
@@ -258,12 +254,11 @@ a:hover {
 
 @keyframes spin{
   0%{
-    transform: rotate(0deg);
+   transform: rotate(0deg);
   }
   100%{
-    transform: rotate(360deg);
+   transform: rotate(360deg);
   }
-
 }
 
 .error {
@@ -284,7 +279,7 @@ a:hover {
 }
 
 .invisible {
-  visibility: hidden;
+visibility: hidden;
 }
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/dropdown.css ***!
@@ -292,6 +287,57 @@ a:hover {
 .teamLogo {
   width: 30px;
   height: 30px;
+  }
+
+.dropHidden {
+  display: none;
+}
+
+.dropContent {
+  background-color: rgba(0, 0, 0, 0.68);
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  position: absolute;
+  top: 115%;
+}
+
+.teamDiv > a{
+  margin-left: 10px;
+  color: white;
+}
+
+.teamDiv {
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.teamDiv:hover {
+  box-shadow: 2px 2px orange;
+} 
+
+.dropButton {
+  background: transparent;
+  border:none;
+  font-family: arial;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.dropdown {
+  position: relative;
+  width: 220px;
+}
+
+.fa-bars:hover {
+  scale:1.2;
+}
+
+.buttonOpen {
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgba(0, 0, 0, 0.516);
 }
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/table.css ***!
@@ -321,8 +367,8 @@ li.name {
   position: relative;
   font-family: arial;
   background-color:rgba(0, 0, 0, 0.447);
-  /* opacity: 100%; */
   color: white;
+  z-index: 0;
 }
 
 .playerInfo {
@@ -339,10 +385,10 @@ li.name {
   width:80%;
   table-layout: fixed;
   font-size: 15px;
-  /* border-top: none;
-  border-bottom: none; */
+  border-top: none;
+  border-bottom: none; 
   text-align: center;
-  /* justify-content:left; */
+  justify-content:left; 
 }
 
 .articleContainer {
@@ -350,7 +396,6 @@ li.name {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   width:100px;
 }
 
@@ -360,15 +405,13 @@ a.news-link {
 }
 
 .cat, .stat {
-  display:table-cell;
+  vertical-align: middle;
+  justify-content: center;
   border: 1px solid white;
-  text-align: center;
 }
 
 .categoryLabel {
   background-color: grey;
-  justify-content:space-evenly;
-
 }
 
 .firstCol {
@@ -378,9 +421,6 @@ a.news-link {
 .news-link {
   text-decoration: none !important;
 }
-
-
-
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/

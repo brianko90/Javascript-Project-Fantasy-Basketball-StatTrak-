@@ -17,4 +17,16 @@ export class SearchUtil {
     let errorDiv = document.querySelector('.error');
     errorDiv.classList.toggle('invisible');
   }
+
+  toggleDropdown() {
+    let dropdownContent = document.querySelector('.dropContent');
+    dropdownContent.classList.toggle('dropHidden');
+    let dropdownButton = document.querySelector('fa-bars')
+    if(dropdownButton.classList.contains('buttonOpen')) {
+      dropdownButton.classList.remove('buttonOpen');
+    } else {
+      dropdownButton.classList.add('buttonOpen')
+    }
+    dropdownButton.set
+  }
 }

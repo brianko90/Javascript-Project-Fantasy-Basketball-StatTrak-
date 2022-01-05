@@ -1,4 +1,55 @@
 .teamLogo {
   width: 30px;
   height: 30px;
+  }
+
+.dropHidden {
+  display: none;
+}
+
+.dropContent {
+  background-color: rgba(0, 0, 0, 0.68);
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  position: absolute;
+  top: 115%;
+}
+
+.teamDiv > a{
+  margin-left: 10px;
+  color: white;
+}
+
+.teamDiv {
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+}
+
+.teamDiv:hover {
+  box-shadow: 2px 2px orange;
+} 
+
+.dropButton {
+  background: transparent;
+  border:none;
+  font-family: arial;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.dropdown {
+  position: relative;
+  width: 220px;
+}
+
+.fa-bars:hover {
+  scale:1.2;
+}
+
+.buttonOpen {
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgba(0, 0, 0, 0.516);
 }

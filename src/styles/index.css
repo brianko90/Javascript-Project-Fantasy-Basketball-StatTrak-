@@ -1,5 +1,5 @@
-body {
 
+body {
   background: url("/images/background1.png") no-repeat center center fixed;
   background-size: cover;
   width: 100vw;
@@ -17,29 +17,18 @@ body {
 
 #logo {
   position: relative;
-  top: -30px;
   width: 150px;
   height: 150px;
-  
 }
 
 .header-container {
   display: flex;
   height: 80px;
   justify-content: space-evenly;
-  /* margin: auto; */
-  /* background-color: teal;
-  border-bottom: 1px solid gray; */
-}
-
-.header-center {
-  margin: auto;
-  text-align: center;
-  align-items: center;
 }
 
 .page-container {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .icon-container {
@@ -47,9 +36,17 @@ body {
   margin: 10px;
 }
 
-
 .header-right {
+  width: 33.33%;
   justify-content: right;
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-left {
+  width: 33.33%;
   display: flex;
   margin-right: 10px;
   align-items: center;
@@ -62,6 +59,8 @@ body {
 }
 
 .header-center {
+  width: 33.33%;
+  display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -77,36 +76,33 @@ body {
 
 .chart {
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   display:flex;
   position: relative;
   justify-content: center;
   width: 60%;
   background-color: rgba(0, 0, 0, 0.653);
   border-radius: 30px;
-  /* opacity: 80%; */
 }
 
 #myChart {
   display: flex;
-  
   width: 70%;
   justify-content: center;
 }
 
-a:visited { 
- text-decoration: none; 
- color: black; 
-}
-
-a {
+a:visited {
   text-decoration: none;
   color: black;
 }
 
-a:hover { 
-  text-decoration: none; 
-  color:yellow; 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color:yellow;
 }
 
 .remove-button {
@@ -120,4 +116,3 @@ a:hover {
 .remove-button:hover {
   opacity: 1;
 }
-
