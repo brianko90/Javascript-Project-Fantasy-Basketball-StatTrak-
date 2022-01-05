@@ -16,7 +16,7 @@ li.name {
 }
 
 .playerDiv {
-  border: 2px solid orange;
+  border: 2px solid #CC5500;
   width: 80%;
   height: auto;
   display: flex;

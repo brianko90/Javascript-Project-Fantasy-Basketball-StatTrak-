@@ -10,11 +10,12 @@ Fantasy Basketball StatTrak is a single stop webpage for all your fantasy basket
 
 On the Fantasy Basketball StatTrak website, users will be able to:
 
-- View players statistics from their previous seasons
-- Compare these statistics to the league average and to the average of their played position
-- Search for players based on their team or their position
-- Sort lists of players based on their statistics (Ascending, descending)
-- Create their own mock team to visualize their total stats
+- View players statistics from their previous seasons in a player card displayed below the graph
+- Compare these statistics to the top 50 average of each category
+- Search for players based on their name and see their data added to the graph. 
+- Being able to remove players that a user no longer wishes to compare by clicking the trashbin icon next to the player card
+- Check out a recent news article regarding a player by clicking a link in the players card (if there is a recent news article)
+- For users unfamiliar with NBA rosters, they can click the dropdown located in the to left to see a list of NBA teams which will link them to the teams roster list
 
 ## WireFrames
 
@@ -31,14 +32,14 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 
 This project will be implemented using the following technologies:
 
-- The [D3 library](https://d3js.org/) to construct graphs of players statistics compared to league averages
-- The [API-NBA](https://rapidapi.com/api-sports/api/api-nba/) and [NBA Stats API](https://any-api.com/nba_com/nba_com/docs/API_Description) to gather information and statistics to display
+- The [Chart JS library](https://www.chartjs.org/docs/3.0.2/) to construct graphs of players statistics compared to league averages
+- The [NBA Player Individual Stats API Documentation](https://rapidapi.com/kaylanhusband/api/nba-player-individual-stats/) and [NBA Latest News API](https://rapidapi.com/savey03/api/nba-latest-news/) to gather information and statistics to display
 
 ## Implementation Timeline
 
 NB: 
 
-- **Friday Afternoon & Weekend:** Setup the project. Implement the D3 library and test around to see how data will be visualized. Create basic layout of webpage and start using API's to gather data.
+- **Friday Afternoon & Weekend:** Setup the project. Implement a working chart from Chart.js and test around to see how data will be visualized. Create basic layout of webpage and start using API's to gather data.
 
 - **Monday:** This day will be used to figure out and display averages so that when you look at a players data, they can be shown next to averages. Begin working on sorting features to display information according to team and position. 
 
@@ -56,3 +57,14 @@ If time allows during the project coursetime, or for future updates after:
 - Add a stat drop off warning, if a players statistics have been steadily dropping over the past three seasons. We could display a warning next to the players name that he has been steadily declining in performance. 
 
 
+<ul id="modalList">Some features of this website are:
+            <li>Search for current NBA players to display their average statistics</li>
+            <li>Compare that data against the average of the top 50 players of each category</li>
+            <li>Add more players through the search to compare against eachother</li>
+            <li>Upon search, the players card is displayed below the graph</li>
+            <li>This player card displays their last three seasons statistical averages and general player info</li>
+            <li>Each player card has a button to view a recent news article about the player</li>
+            <li>If you no longer wish to view the player, you can click the trash bin icon to remove him</li>
+            <li>The dropdown menu in the left corner has all NBA teams that you can click to visit the team website</li>
+          </ul>
+          

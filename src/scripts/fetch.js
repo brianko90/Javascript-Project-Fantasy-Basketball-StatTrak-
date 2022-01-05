@@ -1,5 +1,3 @@
-import { Util } from './util.js'
-let util = new Util();
 export class Fetch {
 
   fetchPlayer(playerName) {

@@ -21,12 +21,11 @@ export class SearchUtil {
   toggleDropdown() {
     let dropdownContent = document.querySelector('.dropContent');
     dropdownContent.classList.toggle('dropHidden');
-    let dropdownButton = document.querySelector('fa-bars')
+    let dropdownButton = document.querySelector('.fa-bars');
     if(dropdownButton.classList.contains('buttonOpen')) {
       dropdownButton.classList.remove('buttonOpen');
     } else {
-      dropdownButton.classList.add('buttonOpen')
+      dropdownButton.classList.add('buttonOpen');
     }
-    dropdownButton.set
   }
 }

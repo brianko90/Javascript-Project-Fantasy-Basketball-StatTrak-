@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", async e => {
   let teams = await fetch.fetchTeams()
   util.addTeamsToDropdown(teams)
 
-  let dropdownButton = document.querySelector('.dropdown');
+  let dropdownButton = document.querySelector('.dropContainer');
   dropdownButton.addEventListener("click", search.toggleDropdown);
-  
+
   const chart = util.makeGraph(); 
 
   let searchForm = document.querySelector('#main-search');
@@ -40,3 +40,23 @@ document.addEventListener("DOMContentLoaded", async e => {
   })
   
 })
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () {
+  modal.style.display = "block";
+}
+
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

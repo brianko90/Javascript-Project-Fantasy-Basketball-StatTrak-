@@ -30,7 +30,8 @@ const teamColor = {
   'SA': 'rgba(196, 206, 211)',
   'TOR': 'rgba(206, 17, 65)',
   'UTAH': 'rgba(0, 43, 92)',
-  'WSH': 'rgba(227,24,55)rgba'};
+  'WSH': 'rgba(227,24,55)rgba'
+};
 
 const teamUrl = [
   'https://www.espn.com/nba/team/roster/_/name/lal/los-angeles-lakers',
@@ -99,8 +100,8 @@ export class Util {
     button.classList.add('remove-button')
     button.classList.add(`${player.firstName}_${player.lastName}`);
     div.appendChild(button);
-    let removeButton = document.getElementsByClassName("fa-trash-alt")[0];
-    removeButton.addEventListener("click", e => {
+    let removeButton = document.getElementsByClassName("fa-trash-alt");
+    removeButton[removeButton.length - 1].addEventListener("click", e => {
       this.removeDataFromGraph(player, chart);
       this.removePlayerBox(player);
     })
@@ -313,29 +314,6 @@ export class Util {
     articleContainer.appendChild(article);
     div.append(articleContainer);
   }
-
-  addTeamsToDropdown(teams) {
-    
-    let teamDropdown = Array.from(document.getElementsByClassName('dropContent'))[0];
-    
-    teams.forEach((team) => {
-      let teamDiv = document.createElement('div');
-      let teamA = document.createElement('a');
-      let teamImg = document.createElement('img');
-      teamImg.src = team.teamLogoUrl;
-      teamImg.classList.add('teamLogo');
-      teamDiv.appendChild(teamImg);
-      teamA.innerText = team.name;
-      teamDiv.appendChild(teamA);
-      console.log(teamA)
-      // teamA.href = 1
-      // teamA.innerHTML = 
-      teamDropdown.append(teamDiv)
-    })
-    // teamDropdown.append(teamA)
-  }
-
-
 
   addTeamsToDropdown(teams) {
     let teamDropdown = Array.from(document.getElementsByClassName('dropContent'))[0];

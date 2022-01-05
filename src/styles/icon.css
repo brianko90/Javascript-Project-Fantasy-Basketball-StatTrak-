@@ -1,55 +1,85 @@
 .fa-github:hover {
-  color: orange;
   animation: git-flip 2s ease-in-out infinite; 
 }
 
 @keyframes git-flip {
   0% {
     transform: rotateY(0deg); 
-    color: rgb(0, 0, 0);
+    color: #CC5500;
   }
   33%{
     transform: rotateY(90deg); 
-    color: rgba(0,0,0,0.75);
+    color: #CC5500;
   }
   50% {
     transform: rotateY(180deg); 
-    color: rgba(0,0,0,0.45);
+    color: #CC5500;
   }
   67%{
     transform: rotateY(180deg); 
-    color: rgba(0,0,0,0.45);
+    color: #CC5500;
   }
   100% {
     transform: rotateY(360deg); 
-    color: rgba(0,0,0,0.75);
+    color: #CC5500;
   } 
 }
 
 .fa-linkedin:hover {
   animation: linked-flip 2s ease-in-out infinite; 
-  color: orange;
 }
 
 @keyframes linked-flip {
   0% {
     transform: rotateY(0deg); 
-    color: rgb(0, 0, 0);
+    color: #CC5500;
   }
   33%{
     transform: rotateY(90deg); 
-    color: rgba(0,0,0,0.75);
+    color: #CC5500;
   }
   50% {
     transform: rotateY(180deg); 
-    color: rgba(0,0,0,0.45);
+    color: #CC5500;
   }
   67%{
     transform: rotateY(180deg); 
-    color: rgba(0,0,0,0.45);
+    color: #CC5500;
   }
   100% {
     transform: rotateY(360deg); 
-    color: rgba(0,0,0,0.75);
+    color: #CC5500;
   } 
+}
+
+.fa-info-circle:hover {
+  animation: info-flip 2s ease-in-out infinite;
+  cursor: pointer; 
+}
+
+@keyframes info-flip {
+  0% {
+    transform: rotateY(0deg); 
+    color: #CC5500;
+  }
+  33%{
+    transform: rotateY(90deg); 
+    color: #CC5500;
+  }
+  50% {
+    transform: rotateY(180deg); 
+    color: #CC5500;
+  }
+  67%{
+    transform: rotateY(180deg); 
+    color: #CC5500;
+  }
+  100% {
+    transform: rotateY(360deg); 
+    color: #CC5500;
+  } 
+}
+
+.fa-bars:hover {
+  cursor: pointer;
 }
