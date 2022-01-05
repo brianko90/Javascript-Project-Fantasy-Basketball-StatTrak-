@@ -16,9 +16,10 @@ body {
 }
 
 #logo {
+  top: 40%;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 .header-container {
@@ -49,8 +50,10 @@ body {
   width: 33.33%;
   display: flex;
   margin-right: 10px;
-  align-items: center;
+  /* align-items: center; */
   padding: 20px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 #main-search {
@@ -100,14 +103,15 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: none;
   color:yellow;
-}
+} */
 
 .remove-button {
   position: absolute;
-  left: 99%;
+  left: 98.5%;
+  top: 2%;
   cursor: pointer;
   font-family: arial;
   opacity: 0.5;
@@ -115,4 +119,9 @@ a:hover {
 
 .remove-button:hover {
   opacity: 1;
+}
+
+.dropContainer {
+  vertical-align: middle;
+  text-align: center;
 }

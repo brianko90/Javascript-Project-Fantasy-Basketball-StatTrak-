@@ -73,7 +73,7 @@
   height: 50px;
   border-radius: 50%;
   border: 16px solid rgba(0, 0, 0, 0.639);
-  border-top: 16px solid rgb(196, 115, 15);
+  border-top: 16px solid #CC5500;
   animation: spin 2s linear infinite;
 }
 

@@ -70,9 +70,10 @@ body {
 }
 
 #logo {
+  top: 40%;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 .header-container {
@@ -103,8 +104,10 @@ body {
   width: 33.33%;
   display: flex;
   margin-right: 10px;
-  align-items: center;
+  /* align-items: center; */
   padding: 20px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 #main-search {
@@ -154,14 +157,15 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: none;
   color:yellow;
-}
+} */
 
 .remove-button {
   position: absolute;
-  left: 99%;
+  left: 98.5%;
+  top: 2%;
   cursor: pointer;
   font-family: arial;
   opacity: 0.5;
@@ -169,6 +173,11 @@ a:hover {
 
 .remove-button:hover {
   opacity: 1;
+}
+
+.dropContainer {
+  vertical-align: middle;
+  text-align: center;
 }
 /*!***********************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/searchButton.css ***!
@@ -248,7 +257,7 @@ a:hover {
   height: 50px;
   border-radius: 50%;
   border: 16px solid rgba(0, 0, 0, 0.639);
-  border-top: 16px solid rgb(196, 115, 15);
+  border-top: 16px solid #CC5500;
   animation: spin 2s linear infinite;
 }
 
@@ -300,6 +309,7 @@ visibility: hidden;
   border-radius: 20px;
   position: absolute;
   top: 115%;
+  width: 220px;
 }
 
 .teamDiv > a{
@@ -314,7 +324,7 @@ visibility: hidden;
 }
 
 .teamDiv:hover {
-  box-shadow: 2px 2px orange;
+  box-shadow: 2px 2px #CC5500;
 } 
 
 .dropButton {
@@ -327,7 +337,6 @@ visibility: hidden;
 
 .dropdown {
   position: relative;
-  width: 220px;
 }
 
 .fa-bars:hover {
@@ -420,6 +429,64 @@ a.news-link {
 
 .news-link {
   text-decoration: none !important;
+}
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/icon.css ***!
+  \***************************************************************************************************/
+.fa-github:hover {
+  color: orange;
+  animation: git-flip 2s ease-in-out infinite; 
+}
+
+@keyframes git-flip {
+  0% {
+    transform: rotateY(0deg); 
+    color: rgb(0, 0, 0);
+  }
+  33%{
+    transform: rotateY(90deg); 
+    color: rgba(0,0,0,0.75);
+  }
+  50% {
+    transform: rotateY(180deg); 
+    color: rgba(0,0,0,0.45);
+  }
+  67%{
+    transform: rotateY(180deg); 
+    color: rgba(0,0,0,0.45);
+  }
+  100% {
+    transform: rotateY(360deg); 
+    color: rgba(0,0,0,0.75);
+  } 
+}
+
+.fa-linkedin:hover {
+  animation: linked-flip 2s ease-in-out infinite; 
+  color: orange;
+}
+
+@keyframes linked-flip {
+  0% {
+    transform: rotateY(0deg); 
+    color: rgb(0, 0, 0);
+  }
+  33%{
+    transform: rotateY(90deg); 
+    color: rgba(0,0,0,0.75);
+  }
+  50% {
+    transform: rotateY(180deg); 
+    color: rgba(0,0,0,0.45);
+  }
+  67%{
+    transform: rotateY(180deg); 
+    color: rgba(0,0,0,0.45);
+  }
+  100% {
+    transform: rotateY(360deg); 
+    color: rgba(0,0,0,0.75);
+  } 
 }
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!

@@ -14,6 +14,7 @@
   border-radius: 20px;
   position: absolute;
   top: 115%;
+  width: 220px;
 }
 
 .teamDiv > a{
@@ -28,7 +29,7 @@
 }
 
 .teamDiv:hover {
-  box-shadow: 2px 2px orange;
+  box-shadow: 2px 2px #CC5500;
 } 
 
 .dropButton {
@@ -41,7 +42,6 @@
 
 .dropdown {
   position: relative;
-  width: 220px;
 }
 
 .fa-bars:hover {

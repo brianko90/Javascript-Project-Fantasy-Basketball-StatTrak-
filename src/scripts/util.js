@@ -92,18 +92,15 @@ export class Util {
   }
 
   addRemoveButton(player, chart) {
+
     let div = Array.from(document.getElementsByClassName("playerDiv")).pop();
     let button = document.createElement('label');
-    button.innerHTML = `<input type="submit">`;
-    // ADDING A ICON BUTTON TO REMOVE PLAYER
-    button.innerText = "X"
+    button.innerHTML = `<i class="fas fa-trash-alt"></i>`;
     button.classList.add('remove-button')
     button.classList.add(`${player.firstName}_${player.lastName}`);
     div.appendChild(button);
-
-    button.addEventListener("click", async e => {
-      //CODE TO REMOVE PLAYER
-      e.preventDefault();
+    let removeButton = document.getElementsByClassName("fa-trash-alt")[0];
+    removeButton.addEventListener("click", e => {
       this.removeDataFromGraph(player, chart);
       this.removePlayerBox(player);
     })
@@ -210,7 +207,7 @@ export class Util {
       datasets: [{
         data: [34.4, 23.7, 8.9, 6.5, 1.3, 54.1, 87.3 ,42.1, 2.9],
         label: "Average of Top 50",
-        backgroundColor: "#FFD700",
+        backgroundColor: "#CC5500",
         borderColor: "yellow"
       }]
     }
