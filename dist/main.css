@@ -310,6 +310,7 @@ visibility: hidden;
   position: absolute;
   top: 115%;
   width: 230px;
+  z-index: 1;
 }
 
 .teamDiv > a{
@@ -355,6 +356,10 @@ visibility: hidden;
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/table.css ***!
   \****************************************************************************************************/
+#player-view {
+  margin-bottom: 20px;
+}
+
 li.name {
   font-weight:500;
   text-decoration: underline;
@@ -381,7 +386,7 @@ li.name {
   font-family: arial;
   background-color:rgba(0, 0, 0, 0.447);
   color: white;
-  z-index: -1;
+  z-index: 0;
 }
 
 .playerInfo {
