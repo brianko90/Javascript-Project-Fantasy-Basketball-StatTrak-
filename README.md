@@ -4,7 +4,7 @@
 
 Fantasy basketball is a popular online game where a group of players draft real professional NBA players onto their team. Throughout the season, you are placed in head to head matchups against your fellow league members, in which the winner is determined by the stats produced by the NBA players that you play on your team. A players record is determined by the performance of their team throughout the season. The winner of a fantasy basketball team is the last team standing after a long season and postseason. 
 
-Fantasy Basketball StatTrak is a single stop webpage for all your fantasy basketball statistical data needs. The website is a gold mine for people looking to gain a competitive edge before their fantasy drafts and also for throughout the season. A user has access to past data on NBA players statistics and the league averages of each position which allows them to make educated and strategic decisions on who they would want to draft for their team. 
+Fantasy Basketball StatTrak is a single stop webpage for all your fantasy basketball statistical data needs. The website is a gold mine for people looking to gain a competitive edge before their fantasy drafts and also for throughout the season. A user has access to past data on NBA players statistics and a graphical representation of that data compared to the top 50 average of each statistical category. This allows users to make educated and strategic decisions on who they would want to draft for their team. 
 
 ## Functionality & MVPs
 
@@ -19,14 +19,14 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 
 ## WireFrames
 
-![Wireframe1](/images/wireframe1.png)
+![Wireframe1](/src/images/wireframe1.png)
 
 - This will be the most important part since it displays the most information and data.
 - The nav links will let users access my information.
 - On the right side, there is a mock team creator, where you can add players from the main search area by pressing the (+) next to player. 
 - Each of the statistical categories will be displayed above the player slots. 
 - When you click on each player, there will be a popup window that will display the past years statistics of the player and a graph showing their average stats relative to the league/position average.
-![Wireframe2](/images/wireframe2.png)
+![Wireframe2](/src/images/wireframe2.png)
 
 ## Technologies, Libraries, APIs
 
