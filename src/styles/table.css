@@ -1,5 +1,5 @@
 #player-view {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 li.name {
@@ -20,15 +20,16 @@ li.name {
 }
 
 .playerDiv {
-  border: 2px solid #CC5500;
+  border: 0.5px solid #CC5500;
   width: 80%;
   height: auto;
   display: flex;
   position: relative;
   font-family: arial;
-  background-color:rgba(0, 0, 0, 0.447);
+  background-color:rgba(0, 0, 0, 0.694);
   color: white;
   z-index: 0;
+  /* margin-bottom: 10px; */
 }
 
 .playerInfo {
@@ -72,7 +73,7 @@ a.news-link {
 }
 
 .categoryLabel {
-  background-color: grey;
+  background-color: #433f44;
 }
 
 .firstCol {

@@ -34,9 +34,6 @@ const teamColor = {
 };
 
 const teamUrl = [
-  'https://www.espn.com/nba/team/roster/_/name/lal/los-angeles-lakers',
-  'https://www.espn.com/nba/team/roster/_/name/wsh/washington-wizards',
-  'https://www.espn.com/nba/team/roster/_/name/orl/orlando-magic',
   'https://www.espn.com/nba/team/roster/_/name/atl/atlanta-hawks',
   'https://www.espn.com/nba/team/roster/_/name/sa/san-antonio-spurs',
   'https://www.espn.com/nba/team/roster/_/name/sac/sacramento-kings',
@@ -59,6 +56,9 @@ const teamUrl = [
   'https://www.espn.com/nba/team/roster/_/name/mil/milwaukee-bucks',
   'https://www.espn.com/nba/team/roster/_/name/hou/houston-rockets',
   'https://www.espn.com/nba/team/roster/_/name/min/minnesota-timberwolves',
+  'https://www.espn.com/nba/team/roster/_/name/lal/los-angeles-lakers',
+  'https://www.espn.com/nba/team/roster/_/name/wsh/washington-wizards',
+  'https://www.espn.com/nba/team/roster/_/name/orl/orlando-magic',
   'https://www.espn.com/nba/team/roster/_/name/chi/chicago-bulls',
   'https://www.espn.com/nba/team/roster/_/name/okc/oklahoma-city-thunder',
   'https://www.espn.com/nba/team/roster/_/name/dal/dallas-mavericks',
