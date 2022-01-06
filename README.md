@@ -1,6 +1,8 @@
 # Javascript Project - Fantasy Basketball StatTrak
 
-![screenshot1](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/wireframe1.png)
+![screenshot1](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/screenshot1.png)
+
+![screenshot2](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/screenshot2.png)
 
 ## Background
 
@@ -58,5 +60,9 @@ NB:
 
 If time allows during the project coursetime, or for future updates after:
 
-- Add an age warning, where the age of a player shown is in a different color based on their age relative to the average age when players usually start to decline (over AVG: red, within 1-2 years of AVG: yellow, well below AVG: green)
+- Add an age warning, where the age of a player shown is in a different color based on their age relative to the average age when players usually start to decline (over AVG: red, within 1-2 years of AVG: yellow, well below AVG: green).
 - Add a stat drop off warning, if a players statistics have been steadily dropping over the past three seasons. We could display a warning next to the players name that he has been steadily declining in performance. 
+- Instead of one steady background for the player tables, try to get the players team colors to be the background color.
+- Figure out a new layout to incorporate a way to have Recent News articles shown with their titles. 
+- Try to implement a way to have search bar autofill from a database of all player names. 
+- Potentially add all players and have the already built player cards display when the players name is clicked. 
