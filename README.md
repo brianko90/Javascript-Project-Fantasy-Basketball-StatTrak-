@@ -1,5 +1,7 @@
 # Javascript Project - Fantasy Basketball StatTrak
 
+![screenshot1](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/wireframe1.png)
+
 ## Background
 
 Fantasy basketball is a popular online game where a group of players draft real professional NBA players onto their team. Throughout the season, you are placed in head to head matchups against your fellow league members, in which the winner is determined by the stats produced by the NBA players that you play on your team. A players record is determined by the performance of their team throughout the season. The winner of a fantasy basketball team is the last team standing after a long season and postseason. 
