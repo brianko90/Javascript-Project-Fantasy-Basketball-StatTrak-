@@ -1,4 +1,4 @@
-# Javascript Project - Fantasy Basketball StatTrak
+# Fantasy Basketball StatTrak
 
 ![screenshot1](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/screenshot1.png)
 
