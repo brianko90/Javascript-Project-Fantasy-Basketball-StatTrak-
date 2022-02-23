@@ -266,15 +266,17 @@ export class Util {
     let color = lastSeason.team;
     chart.data.datasets.push(
       {
-        data: [Number(`${lastSeason.minsPerGame}`),
-              Number(`${lastSeason.pointsPerGame}`),
-              Number(`${lastSeason.reboundsPerGame}`),
-              Number(`${lastSeason.assistsPerGame}`),
-              Number(`${lastSeason.blocksPerGame}`),
-              Number(`${lastSeason.percentageFieldGoal}`),
-              Number(`${lastSeason.percentageFreeThrow}`),
-              Number(`${lastSeason.percentageThree}`),
-              Number(`${lastSeason.turnoversPerGame}`)],
+        data: [
+                Number(`${lastSeason.minsPerGame}`),
+                Number(`${lastSeason.pointsPerGame}`),
+                Number(`${lastSeason.reboundsPerGame}`),
+                Number(`${lastSeason.assistsPerGame}`),
+                Number(`${lastSeason.blocksPerGame}`),
+                Number(`${lastSeason.percentageFieldGoal}`),
+                Number(`${lastSeason.percentageFreeThrow}`),
+                Number(`${lastSeason.percentageThree}`),
+                Number(`${lastSeason.turnoversPerGame}`)
+            ],
         label: name,
         backgroundColor: teamColor[color],
         borderColor: "black"      
