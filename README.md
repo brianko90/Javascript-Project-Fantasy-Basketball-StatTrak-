@@ -1,5 +1,7 @@
 # Fantasy Basketball StatTrak
 
+[StatTrak](http://www.brianko.net/StatTrak-JSProject/)  is a basketball analytical tool website.
+
 ![screenshot1](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/screenshot1.png)
 
 ![screenshot2](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/screenshot2.png)
