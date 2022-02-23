@@ -29,6 +29,8 @@ This project was created using the following technologies:
 
 - The [Chart JS library](https://www.chartjs.org/docs/3.0.2/) to construct graphs of players statistics compared to league averages
 
+![](./images/statTrak.gif)
+
 ```javascript
   addDataToGraph(chart, player, seasons) {
     let lastIndex = seasons.length -1;
