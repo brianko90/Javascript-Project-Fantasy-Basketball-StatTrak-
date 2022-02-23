@@ -74,7 +74,7 @@ This project was created using the following technologies:
 - The player cards will be displayed below the graph and will have their image, general info, their average statistics over the last 3 years, and a link to a recent news article relevant to the player.
 - Each player will also have a trashbin icon, that if the user clicks will remove the selected players player card and their data from the graph. 
 
-## Implementation Timeline
+<!-- ## Implementation Timeline
 
 NB: 
 
@@ -87,7 +87,7 @@ NB:
 - **Wednesday:** If ahead of schedule, I will try to implement bonus features such as the age warning and stat dropoff warning. If not, I will continue to add styling and make the page look great. Since this is a data visualization project, I think a heavy emphasis on making it look nice is important.
 
 - **Thursday:** Complete finishing touches, make webpage look amazing. Apply as much CSS and html magic that I can. 
-
+ -->
 ## Bonus features
 
 If time allows during the project coursetime, or for future updates after:
