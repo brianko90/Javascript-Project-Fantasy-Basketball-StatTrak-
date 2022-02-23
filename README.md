@@ -1,5 +1,7 @@
 # Fantasy Basketball StatTrak
 
+[StatTrak](http://www.brianko.net/StatTrak-JSProject/)  is a basketball analytical tool website.
+
 ![screenshot1](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/screenshot1.png)
 
 ![screenshot2](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/screenshot2.png)
@@ -21,6 +23,45 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 - Check out a recent news article regarding a player by clicking a link in the players card (if there is a recent news article)
 - For users unfamiliar with NBA rosters, they can click the dropdown located in the to left to see a list of NBA teams which will link them to the teams roster list
 
+## Technologies, Libraries, APIs
+
+This project was created using the following technologies:
+
+- The [Chart JS library](https://www.chartjs.org/docs/3.0.2/) to construct graphs of players statistics compared to league averages
+
+![](./images/statTrak.gif)
+
+```javascript
+  addDataToGraph(chart, player, seasons) {
+    let lastIndex = seasons.length -1;
+    let lastSeason = seasons[lastIndex];
+    let name = `${player.firstName} ${player.lastName}`
+    let color = lastSeason.team;
+    chart.data.datasets.push(
+      {
+        data: [
+                Number(`${lastSeason.minsPerGame}`),
+                Number(`${lastSeason.pointsPerGame}`),
+                Number(`${lastSeason.reboundsPerGame}`),
+                Number(`${lastSeason.assistsPerGame}`),
+                Number(`${lastSeason.blocksPerGame}`),
+                Number(`${lastSeason.percentageFieldGoal}`),
+                Number(`${lastSeason.percentageFreeThrow}`),
+                Number(`${lastSeason.percentageThree}`),
+                Number(`${lastSeason.turnoversPerGame}`)
+            ],
+        label: name,
+        backgroundColor: teamColor[color],
+        borderColor: "black"      
+      }
+    ) 
+    chart.update();
+  }
+
+```
+
+- The [NBA Player Individual Stats API Documentation](https://rapidapi.com/kaylanhusband/api/nba-player-individual-stats/) and [NBA Latest News API](https://rapidapi.com/savey03/api/nba-latest-news/) to gather information and statistics to display
+
 ## WireFrames
 
 ![Wireframe1](https://raw.githubusercontent.com/brianko90/StatTrak-JSProject/main/images/wireframe1.png)
@@ -32,15 +73,6 @@ On the Fantasy Basketball StatTrak website, users will be able to:
 
 - The player cards will be displayed below the graph and will have their image, general info, their average statistics over the last 3 years, and a link to a recent news article relevant to the player.
 - Each player will also have a trashbin icon, that if the user clicks will remove the selected players player card and their data from the graph. 
-
-
-
-## Technologies, Libraries, APIs
-
-This project will be implemented using the following technologies:
-
-- The [Chart JS library](https://www.chartjs.org/docs/3.0.2/) to construct graphs of players statistics compared to league averages
-- The [NBA Player Individual Stats API Documentation](https://rapidapi.com/kaylanhusband/api/nba-player-individual-stats/) and [NBA Latest News API](https://rapidapi.com/savey03/api/nba-latest-news/) to gather information and statistics to display
 
 ## Implementation Timeline
 
